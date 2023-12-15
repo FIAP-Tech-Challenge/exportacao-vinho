@@ -33,7 +33,7 @@ Seu objetivo é dizer o montante de venda de exportação nos últimos 15 anos, 
 
 **CONFIGURANDO O AMBIENTE:**
 
-1.No diretório "etl", ficará o notebook responsável por extrair, transformar e ler os dados do csv de origem (./data)
+1.O arquivo tratamento.py ficará responsável por extrair, transformar e ler os dados do csv de origem (./data)
 
 2.Todas as bibliotecas estarão listadas no arquivo requirements.txt para criação do ambiente virtual
 

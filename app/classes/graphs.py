@@ -8,13 +8,14 @@ from . import functions as f
 def graph_globe(df: pl.DataFrame) -> px:
     df_aux = (
         df.filter(pl.col("liters") > 1000)
-        .group_by(["country"])
+        .group_by(["country","name"])
         .agg(pl.sum("value"))
     )
 
     fig = px.scatter_geo(
         df_aux,
-        locations="country",
+        locations="name",
+        locationmode="country names",
         size="value",
         color="country",
         projection="orthographic",
@@ -28,7 +29,7 @@ def graph_globe(df: pl.DataFrame) -> px:
 
     fig.update_layout(
         title={
-            "text": "Total de Litros de vinho Vendidos por País",
+            "text": "Total de Litros de Vinho Vendidos por País",
             "xanchor": "center",
             "xref": "paper",
             "yanchor": "top",
