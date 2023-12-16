@@ -3,20 +3,9 @@ import plotly.express as px
 import polars as pl
 import base64
 
-
 @st.cache_data
 def load_data() -> pl.DataFrame:
     return pl.read_csv("./data/dataframe_final.csv")
-
-
-def displayPDF(file):
-    with open(file, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode("utf-8")
-
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" style="margin:60px 0 20px 0" width="95%" height="320px" type="application/pdf"></iframe>'
-
-        st.markdown(pdf_display, unsafe_allow_html=True)
-
 
 def config_streamlit() -> None:
     st.set_page_config(
