@@ -4,7 +4,7 @@ import polars as pl
 from . import functions as f
 
 
-# Plotar Globo com a quantidade de litros importados por país
+# Plotar Globo com a quantidade de litros Exportados por país
 def graph_globe(df: pl.DataFrame) -> px:
     df_aux = (
         df.filter(pl.col("liters") > 1000)
@@ -39,7 +39,7 @@ def graph_globe(df: pl.DataFrame) -> px:
         },
         template="seaborn",
         height=500,
-        margin={"l": 10, "r": 10, "b": 80, "t": 70, "pad": 5},
+        margin={"l": 10, "r": 10, "b": 140, "t": 130, "pad": 5},
         legend={
             "orientation": "v",
             "yanchor": "middle",
@@ -53,51 +53,50 @@ def graph_globe(df: pl.DataFrame) -> px:
 
     return fig
 
-
 def table_info(df: pl.DataFrame) -> pl.DataFrame:
     return df.select(
-        pl.lit("Brasil").alias("País de Destino"),
-        pl.col("country").alias("País de Origem"),
+        pl.lit("Brasil").alias("País de Origem"),
+        pl.col("country").alias("País de Destino"),
         pl.col("year").alias("Ano de Referência"),
-        pl.col("liters").alias("Quantidade de Vinho Importado (Litros)"),
-        pl.col("value").alias("Valor Total Importado (US$)"),
+        pl.col("liters").alias("Quantidade de Vinho Exportado (Litros)"),
+        pl.col("value").alias("Valor Total Exportado (US$)"),
     )
 
-def graph_two(df: pl.DataFrame, config: dict) -> None:
+def graph_1(df: pl.DataFrame, config: dict) -> None:
 
-    var = "value" if config['metric'] == "Valor Importado" else "liters"
+    var = "value" if config['metric'] == "Valor Exportado" else "liters"
     func = pl.sum if config['agg'] == "Valor Total" else pl.mean
 
     df_aux = df.group_by("country").agg(func(var)).sort(var, descending=True)
     fig = px.bar(df_aux, x="country", y=var)
 
     layout_info = {
-        "Valor Importado": {
+        "Valor Exportado": {
             "Valor Total": {
-                "yaxis": {"title": "Valor Total Importado (US$)"},
+                "yaxis": {"title": "Valor Total Exportado (US$)"},
                 "hovertemplate": "<b>%{x}</b><br>Total: U$ %{y}",
-                "title": "Valor Total Importado por Região",
-                "sup": "Gráfico de Barras exibindo o valor total de vinhos importado (em US$) para cada região do mundo",
+                "title": "Valor Total Exportado por Região",
+                "sup": "Gráfico de Barras exibindo o valor total de vinhos exportado (em US$) para cada região do mundo",
             },
             "Valor Médio": {
-                "yaxis": {"title": "Valor Médio Importado (US$)"},
+                "yaxis": {"title": "Valor Médio Exportado (US$)"},
                 "hovertemplate": "<b>%{x}</b><br>Média: U$ %{y}",
-                "title": "Valor Médio Importado por Região",
-                "sup": "Gráfico de Barras exibindo o valor médio de vinho importado (em US$) para cada região do mundo",
+                "title": "Valor Médio Exportado por Região",
+                "sup": "Gráfico de Barras exibindo o valor médio de vinho exportado (em US$) para cada região do mundo",
             },
         },
-        "Litros Importados": {
+        "Litros Exportados": {
             "Valor Total": {
-                "yaxis": {"title": "Total de Vinho Importados (Litros)"},
+                "yaxis": {"title": "Total de Vinho Exportados (Litros)"},
                 "hovertemplate": "<b>%{x}</b><br>Total: %{y} Litros",
-                "title": "Volume de Vinho Importado por Região",
-                "sup": "Gráfico de Barras exibindo o volume total de vinho importado (em litros) para cada região do mundo",
+                "title": "Volume de Vinho Exportado por Região",
+                "sup": "Gráfico de Barras exibindo o volume total de vinho exportado (em litros) para cada região do mundo",
             },
             "Valor Médio": {
-                "yaxis": {"title": "Volume Médio de Vinho Importado (Litros)"},
+                "yaxis": {"title": "Volume Médio de Vinho Exportado (Litros)"},
                 "hovertemplate": "<b>%{x}</b><br>Média: %{y} Litros",
-                "title": "Volume Médio de Vinho Importado por Região",
-                "sup": "Gráfico de Barras exibindo o volume médio de vinho importado (em litros) para cada região do mundo",
+                "title": "Volume Médio de Vinho Exportado por Região",
+                "sup": "Gráfico de Barras exibindo o volume médio de vinho exportado (em litros) para cada região do mundo",
             },
         },
     }
@@ -116,16 +115,15 @@ def graph_two(df: pl.DataFrame, config: dict) -> None:
     
     return fig
 
-# Gráfico 3 - Mapa - Valores Totais/Média por País
-def graph_three(df: pl.DataFrame, config: dict) -> None:
+def graph_2(df: pl.DataFrame, config: dict) -> None:
 
-    var = "value" if config['metric'] == "Valor Importado" else "liters"
+    var = "value" if config['metric'] == "Valor Exportado" else "liters"
     func = pl.sum if config['agg'] == "Valor Total" else pl.mean
     year = config['year']
 
     df_aux = (
         df.filter((pl.col("year") >= year[0]) & (pl.col("year") <= year[1]))
-        .group_by(["country"])
+        .group_by(["name","country"])
         .agg(func(var))
         .sort("country")
     )
@@ -133,49 +131,41 @@ def graph_three(df: pl.DataFrame, config: dict) -> None:
     fig = px.scatter_geo(
         df_aux,
         size=var,
+        locations="name",
+        locationmode="country names",
         color="country",
         projection="natural earth",
         size_max=30,
         custom_data=["country", var],
-        color_discrete_map={
-            "Oceania": "#636EFA",
-            "América Central e Caribe": "#EF553B",
-            "América do Norte": "#00CC96",
-            "África": "#AB63FA",
-            "Europa": "#FFA15A",
-            "Oriente Médio": "#19D3F3",
-            "América do Sul": "#FECB52",
-            "Ásia": "#FF6692",
-        },
     )
 
     layout_info = {
-        "Valor Importado": {
+        "Valor Exportado": {
             "Valor Total": {
-                "yaxis": {"title": "Valor Total Importado (US$)"},
+                "yaxis": {"title": "Valor Total Exportado (US$)"},
                 "hovertemplate": "<b>%{customdata[0]}</b><br>Total: U$ %{customdata[1]}",
-                "title": "Valor Total Importado (US$) por País",
-                "sup": "Mapa exibindo o valor total de vinho importado (em US$) para cada país do mundo",
+                "title": "Valor Total Exportado (US$) por País",
+                "sup": "Mapa exibindo o valor total de vinho exportado (em US$) para cada país do mundo",
             },
             "Valor Médio": {
-                "yaxis": {"title": "Valor Médio Importado (US$)"},
+                "yaxis": {"title": "Valor Médio Exportado (US$)"},
                 "hovertemplate": "<b>%{customdata[0]}</b><br>Média: U$ %{customdata[1]:.2f}",
-                "title": "Valor Médio Importado por País",
-                "sup": "Mapa exibindo o valor médio de vinho importado (em US$) para cada país do mundo",
+                "title": "Valor Médio Exportado por País",
+                "sup": "Mapa exibindo o valor médio de vinho exportado (em US$) para cada país do mundo",
             },
         },
-        "Litros Importados": {
+        "Litros Exportados": {
             "Valor Total": {
-                "yaxis": {"title": "Total de Vinho Importados (Litros)"},
+                "yaxis": {"title": "Total de Vinho Exportados (Litros)"},
                 "hovertemplate": "<b>%{customdata[0]}</b><br>Total: %{customdata[1]} Litros",
-                "title": "Total de Vinho Importados por País",
-                "sup": "Mapa exibindo o volume total de vinho importado (em litros) para cada país do mundo",
+                "title": "Total de Vinho Exportados por País",
+                "sup": "Mapa exibindo o volume total de vinho exportado (em litros) para cada país do mundo",
             },
             "Valor Médio": {
-                "yaxis": {"title": "Volume Médio de Vinho Importado (Litros)"},
+                "yaxis": {"title": "Volume Médio de Vinho Exportado (Litros)"},
                 "hovertemplate": "<b>%{customdata[0]}</b><br>Média: %{customdata[1]:.2f} Litros",
-                "title": "Volume Médio de Vinho Importado por País",
-                "sup": "Mapa exibindo o volume médio de vinho importado (em litros) para cada país do mundo",
+                "title": "Volume Médio de Vinho Exportado por País",
+                "sup": "Mapa exibindo o volume médio de vinho exportado (em litros) para cada país do mundo",
             },
         },
     }
@@ -189,7 +179,6 @@ def graph_three(df: pl.DataFrame, config: dict) -> None:
         hovertemplate=layout_info_selected["hovertemplate"],
         legend={
             "orientation": "h",
-            "yanchor": "middle",
             "xanchor": "center",
             "x": 0.5,
             "y": -0.1,
@@ -202,8 +191,7 @@ def graph_three(df: pl.DataFrame, config: dict) -> None:
 
     return fig
 
-# Gráfico 4- Mapa - Valores Importado por País por Ano
-def graph_four(df: pl.DataFrame, config:dict) -> None:
+def graph_3(df: pl.DataFrame, config:dict) -> None:
     cols = st.columns([2, 1], gap="large")
     col_name = config['col_name']
     
@@ -250,17 +238,17 @@ def graph_four(df: pl.DataFrame, config:dict) -> None:
         )
 
         layout_info = {
-            "Valor Importado": {
-                "yaxis": {"title": "Valor Total Importado (US$)"},
+            "Valor Exportado": {
+                "yaxis": {"title": "Valor Total Exportado (US$)"},
                 "hovertemplate": "<b>%{x}</b><br>U$ %{y}",
-                "title": "Valor Total Importado nos Anos de Referência",
-                "sup": "Gráfico de Linha exibindo o valor total de vinho importado (em US$) por país ao longo do tempo",
+                "title": "Valor Total Exportado nos Anos de Referência",
+                "sup": "Gráfico de Linha exibindo o valor total de vinho exportado (em US$) por país ao longo do tempo",
             },
-            "Litros Importados": {
-                "yaxis": {"title": "Total de Vinho Importados (Litros)"},
+            "Litros Exportados": {
+                "yaxis": {"title": "Total de Vinho Exportados (Litros)"},
                 "hovertemplate": "<b>%{x}</b><br>%{y} Litros",
-                "title": "Total de Vinho Importados nos Anos de Referência",
-                "sup": "Gráfico de Linha exibindo o volume total de vinho importado (em litros) por país ao longo do tempo",
+                "title": "Total de Vinho Exportados nos Anos de Referência",
+                "sup": "Gráfico de Linha exibindo o volume total de vinho exportado (em litros) por país ao longo do tempo",
             },
         }
         
@@ -285,60 +273,4 @@ def graph_four(df: pl.DataFrame, config:dict) -> None:
             title_sup=layout_info_selected["sup"]
         )
         
-    return fig
-
-# Gráfico 5 - Preço Médio por Ano
-def graph_five(df: pl.DataFrame, config:dict) -> None:
-
-    if not config['median_region']:
-        df_aux = (
-            df.filter(pl.col("price_per_liter") > 0)
-            .group_by(["year"])
-            .agg(pl.median("price_per_liter"))
-            .sort("year")
-        )
-        fig = px.line(df_aux, x="year", y="price_per_liter")
-        hovertemplate = "<b>Ano de %{x}</b><br>U$ %{y:.2f}"
-        titlex = "Ano de Referência"
-        title = "Preço mediano por litro por Ano"
-        title_sup = "Gráfico de Linha exibindo o preço mediano por litro de vinho importado (em US$) ao longo do tempo"
-        line_color = "#794A9E"
-        marker_color = ""
-    else:
-        df_aux = (
-            df.filter(pl.col("price_per_liter") > 0)
-            .group_by(["continent"])
-            .agg(pl.median("price_per_liter"))
-            .sort("price_per_liter", descending=True)
-        )
-        fig = px.bar(df_aux, x="continent", y="price_per_liter")
-        hovertemplate = "<b>%{x}</b><br>U$ %{y:.2f}"
-        titlex = "Região"
-        title = "Preço mediano por litro (US$) por Região"
-        title_sup = "Gráfico de Linha exibindo o preço total mediano por litro de vinho importado (em US$) para cada região do mundo"
-        line_color = ""
-        marker_color = "#794A9E"
-
-    f.layout_graphs(
-        fig,
-        xaxis={"title": titlex},
-        yaxis={"title": "Preço mediano por Litro (US$)"},
-        hovertemplate=hovertemplate,
-        legend={
-            "orientation": "h",
-            "yanchor": "middle",
-            "xanchor": "center",
-            "x": 0.5,
-            "y": -0.3,
-            "title": "",
-            "itemsizing": "constant",
-            "traceorder": "reversed",
-        },
-        title_text=title,
-        title_sup=title_sup,
-        line_color=line_color,
-        marker_color=marker_color
-        
-    )
-
     return fig
