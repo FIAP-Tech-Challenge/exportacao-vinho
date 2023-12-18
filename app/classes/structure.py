@@ -132,10 +132,12 @@ def struct_description(text: str) -> None:
     return None
 
 def header() -> None:
-    st.markdown("<p style='text-align: center; color:violet; font-size:72px'> FIAPampas Exportação de Vinho </p>",  unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color:violet; font-size:72px'> FIAP - Vinhos </p>",  unsafe_allow_html=True)
+    
     st.markdown(
-        """ ## Somos a empresa número 1 que mais exporta vinhos do Brasil para o mundo."""
+        "<p style='text-align: center; color:white; font-size:24px'> Somos a empresa número 1 que mais exporta vinhos do Brasil para o mundo. </p>",  unsafe_allow_html=True
     )
+
     st.markdown(
         """ :gray[Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais.]"""
     )
