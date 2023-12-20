@@ -146,7 +146,7 @@ def header() -> None:
     )
  
     with st.expander("↓ Download dos Arquivos", expanded=False):
-        with open('https://github.com/rmakotoinoue/exportacao-vinho/blob/b11ad7668cc82179a8c4c0664c201dd41d495df0/app/data/ExpVinho.csv', 'rb') as file:
+        with open('app\data\ExpVinho.csv', 'rb') as file:
             btn = st.download_button(
                 label="📊 Baixar CSV exportação vinho",
                 data=file,
@@ -156,7 +156,7 @@ def header() -> None:
                 key="download_csv_exp"
             )
 
-        with open('https://github.com/rmakotoinoue/exportacao-vinho/blob/b11ad7668cc82179a8c4c0664c201dd41d495df0/app/data/pais.csv', 'rb') as file:
+        with open('app\data\pais.csv', 'rb') as file:
             btn = st.download_button(
                 label="📊 Baixar CSV países",
                 data=file,
@@ -166,7 +166,7 @@ def header() -> None:
                 key="download_csv_pais"
             )
             
-        with open('https://github.com/rmakotoinoue/exportacao-vinho/blob/b11ad7668cc82179a8c4c0664c201dd41d495df0/app/data/dataframe_final.csv', 'rb') as file:
+        with open('app\data\dataframe_final.csv', 'rb') as file:
             btn = st.download_button(
                 label="📊 Baixar CSV completo",
                 data=file,
