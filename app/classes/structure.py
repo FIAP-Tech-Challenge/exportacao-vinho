@@ -146,7 +146,7 @@ def header() -> None:
     )
  
     with st.expander("↓ Download dos Arquivos", expanded=False):
-        with open('app\data\ExpVinho.csv', 'rb') as file:
+        with open('./data/ExpVinho.csv', 'rb') as file:
             btn = st.download_button(
                 label="📊 Baixar CSV exportação vinho",
                 data=file,
@@ -156,7 +156,7 @@ def header() -> None:
                 key="download_csv_exp"
             )
 
-        with open('app\data\pais.csv', 'rb') as file:
+        with open('./data/pais.csv', 'rb') as file:
             btn = st.download_button(
                 label="📊 Baixar CSV países",
                 data=file,
@@ -166,7 +166,7 @@ def header() -> None:
                 key="download_csv_pais"
             )
             
-        with open('app\data\dataframe_final.csv', 'rb') as file:
+        with open('./data/dataframe_final.csv', 'rb') as file:
             btn = st.download_button(
                 label="📊 Baixar CSV completo",
                 data=file,

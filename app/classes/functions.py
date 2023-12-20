@@ -5,7 +5,7 @@ import base64
 
 @st.cache_data
 def load_data() -> pl.DataFrame:
-    return pl.read_csv("https://github.com/rmakotoinoue/exportacao-vinho/blob/b11ad7668cc82179a8c4c0664c201dd41d495df0/app/data/dataframe_final.csv",truncate_ragged_lines=True)
+    return pl.read_csv("https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/df9394bbead195293a0fb02640a8e2fdb916e324/app/data/dataframe_final.csv",truncate_ragged_lines=True)
 
 def config_streamlit() -> None:
     st.set_page_config(
