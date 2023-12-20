@@ -5,7 +5,6 @@ import base64
 
 @st.cache_data
 def load_data() -> pl.DataFrame:
-    caminho
     return pl.read_csv("/data/dataframe_final.csv")
 
 def config_streamlit() -> None:
