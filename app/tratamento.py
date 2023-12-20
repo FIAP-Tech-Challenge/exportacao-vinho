@@ -7,11 +7,11 @@ import plotly.express as px
 # Lendo CSV
 ######################
 
-df_exp = pl.read_csv("https://github.com/rmakotoinoue/exportacao-vinho/blob/b11ad7668cc82179a8c4c0664c201dd41d495df0/app/data/ExpVinho.csv", separator=";", truncate_ragged_lines=True)
+df_exp = pl.read_csv("app\data\ExpVinho.csv", separator=";")
 df_exp.head()
 
 # %% CSV com código e info dos países
-df_pais = pl.read_csv("https://github.com/rmakotoinoue/exportacao-vinho/blob/b11ad7668cc82179a8c4c0664c201dd41d495df0/app/data/pais.csv", separator=";", encoding='ISO-8859-1').select(
+df_pais = pl.read_csv("app\data\pais.csv", separator=";", encoding='ISO-8859-1').select(
         pl.col("NO_PAIS_ING").alias("name"),
         pl.col("NO_PAIS").alias("country"),
     )
