@@ -43,4 +43,4 @@ df_tratado = (
     .fill_null(0)
 )
 
-df_tratado.write_csv("./dataframe_final.csv")
+df_tratado.write_csv("./data/dataframe_final.csv")
