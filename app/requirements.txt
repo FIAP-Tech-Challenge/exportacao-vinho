@@ -45,3 +45,4 @@ urllib3==2.0.6
 validators==0.22.0
 XlsxWriter==3.1.9
 zipp==3.17.0
+matplotlib==3.8.2
