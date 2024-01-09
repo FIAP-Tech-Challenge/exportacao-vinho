@@ -5,11 +5,11 @@ import base64
 
 @st.cache_data
 def load_data() -> pl.DataFrame:
-    return pl.read_csv("./data/dataframe_final.csv")
+    return pl.read_csv("https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/df9394bbead195293a0fb02640a8e2fdb916e324/app/data/dataframe_final.csv",truncate_ragged_lines=True)
 
 def config_streamlit() -> None:
     st.set_page_config(
-        page_title="FIAPampas Exportação de Vinho",
+        page_title="FIAP - Vinho",
         page_icon="🍷",
         layout="wide",
     )

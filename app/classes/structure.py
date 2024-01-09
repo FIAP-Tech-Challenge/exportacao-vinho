@@ -1,3 +1,4 @@
+import requests
 import streamlit as st
 import polars as pl
 import plotly.express as px
@@ -146,7 +147,19 @@ def header() -> None:
     )
  
     with st.expander("↓ Download dos Arquivos", expanded=False):
-        with open('./data/ExpVinho.csv', 'rb') as file:
+        url_exp = 'https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/ExpVinho.csv'
+        response_exp = requests.get(url_exp)     
+        if response_exp.status_code == 200:
+            # Assuming it's a text file
+            content = response_exp.text
+
+            # Now, you can work with the content as needed
+            with open('file_exp.csv', 'w') as local_file_exp:
+                local_file_exp.write(content)
+        else:
+            print(f"Failed to download file. Status code: {response_exp.status_code}")   
+
+        with open(local_file_exp.name) as file:
             btn = st.download_button(
                 label="📊 Baixar CSV exportação vinho",
                 data=file,
@@ -156,26 +169,7 @@ def header() -> None:
                 key="download_csv_exp"
             )
 
-        with open('./data/pais.csv', 'rb') as file:
-            btn = st.download_button(
-                label="📊 Baixar CSV países",
-                data=file,
-                file_name="pais.csv",
-                mime='text/csv',
-                type='primary',
-                key="download_csv_pais"
-            )
-            
-        with open('./data/dataframe_final.csv', 'rb') as file:
-            btn = st.download_button(
-                label="📊 Baixar CSV completo",
-                data=file,
-                file_name="data.csv",
-                mime='text/csv',
-                type='primary',
-                key="download_csv"
-            )
-            
+       
     st.markdown("<div style='margin-bottom: 40px'></div>", unsafe_allow_html=True)
 
 
