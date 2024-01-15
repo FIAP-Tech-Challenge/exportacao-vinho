@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import urllib.request
+from PIL import Image
 
 st.markdown("<p style='text-align: center; color:MediumPurple; font-size:54px'> Produção de Vinhedos 🍇 </p>",  unsafe_allow_html=True)
 
@@ -16,22 +18,22 @@ with tab1:
 "<p style='text-align: justify; color:white; font-size:18px'>Tudo começa no vinhedo, campo de plantação das uvas. Ele é planejado minuciosamente para oferecer as melhores condições às uvas, como a posição das frutas em relação ao sol.</p>",  unsafe_allow_html=True
     )
 
-url = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/plantio.png?raw=true"
+    url_plantio = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/plantio.png?raw=true"
 
-with urllib.request.urlopen(url) as url_obj:
-    img = np.array(Image.open(url_obj))
-    st.image(img, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
+    with urllib.request.urlopen(url_plantio) as url_obj_plantio:
+        img_plantio = np.array(Image.open(url_obj_plantio))
+        st.image(img_plantio, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
 
 with tab2:
     st.markdown(
 "<p style='text-align: justify; color:white; font-size:18px'>No instante da colheita, as frutas são verificadas atentamente – a fim de encontrar inconformidades – e selecionadas manualmente. Ainda no momento da colheita, são feitos diversos testes para saber se é o momento ideal para retirá-las, visto que, caso haja antecipação ou atraso do processo, as uvas podem perder a qualidade.</p>",  unsafe_allow_html=True
     )
 
-url = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/colheita.png?raw=true"
+    url_colheita = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/colheita.png?raw=true"
 
-with urllib.request.urlopen(url) as url_obj:
-    img = np.array(Image.open(url_obj))
-    st.image(img, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
+    with urllib.request.urlopen(url_colheita) as url_obj_colheita:
+        img_colheita = np.array(Image.open(url_obj_colheita))
+        st.image(img_colheita, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
 
 with tab3:
     st.markdown(
@@ -41,51 +43,49 @@ with tab3:
 "<p style='text-align: justify; color:white; font-size:18px'>Para produzir vinhos tintos,  extração é realizada por gravidade: as uvas ficam dispostas uma em cima das outras dentro de um tanque de aço inox. Com o peso comprimido das frutas, o líquido é extraído.</p>",  unsafe_allow_html=True
     )
 
-url = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/industrializacao.png?raw=true"
+    url_industria = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/industrializacao.png?raw=true"
 
-with urllib.request.urlopen(url) as url_obj:
-    img = np.array(Image.open(url_obj))
-    st.image(img, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
+    with urllib.request.urlopen(url_industria) as url_obj_industria:
+        img_industria = np.array(Image.open(url_obj_industria))
+        st.image(img_industria, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
 
 with tab4:
     st.markdown(
 "<p style='text-align: justify; color:white; font-size:18px'>Nesses mesmos tanques acontece a fermentação, o que significa a adição de fungos para fazer a substituição e transformação do açúcar da fruta em álcool e gás carbônico.</p>",  unsafe_allow_html=True
     )
 
+    url_fermentacao = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/fermentacao.jpg?raw=true"
 
-url = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/fermentacao.jpg?raw=true"
-
-with urllib.request.urlopen(url) as url_obj:
-    img = np.array(Image.open(url_obj))
-    st.image(img, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
+    with urllib.request.urlopen(url_fermentacao) as url_obj_fermentacao:
+        img_fermentacao = np.array(Image.open(url_obj_fermentacao))
+        st.image(img_fermentacao, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
 
 with tab5:
     st.markdown(
 "<p style='text-align: justify; color:white; font-size:18px'>Teoricamente, ao fim da fermentação, o vinho já está pronto. Entretanto, deve ser armazenado para que as substâncias presentes na bebida possam “ganhar corpo” e sabor. Geralmente, são usados barris de carvalho para esse armazenamento, com a finalidade de fazer o líquido entrar em contato com a madeira.</p>",  unsafe_allow_html=True
     )
 
-url = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/armazenamento.png?raw=true"
+    url_armazem = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/armazenamento.png?raw=true"
 
-with urllib.request.urlopen(url) as url_obj:
-    img = np.array(Image.open(url_obj))
-    st.image(img, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
+    with urllib.request.urlopen(url_armazem) as url_obj_armazem:
+        img_armazem = np.array(Image.open(url_obj_armazem))
+        st.image(img_armazem, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
 
 with tab6:
     st.markdown(
 "<p style='text-align: justify; color:white; font-size:18px'>Após um período que pode durar de seis meses a um ano e meio, os vinhos são engarrafados e guardados na posição horizontal, para o contato com a rolha e o bloqueio da entrada do oxigênio, ocasionando a perda de sabor.</p>",  unsafe_allow_html=True
     )
 
+    url_engarrafa= "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/engarrafamento.jpg?raw=true"
 
-url = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/809941f30a3862ec38ce044d0f92a5e44de17d21/app/images/engarrafamento.jpg?raw=true"
-
-with urllib.request.urlopen(url) as url_obj:
-    img = np.array(Image.open(url_obj))
-    st.image(img, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
+    with urllib.request.urlopen(url_engarrafa) as url_obj_engarrafa:
+        img_engarrafa = np.array(Image.open(url_obj_engarrafa))
+        st.image(img_engarrafa, width=400, caption='Fonte: Divvino Blog', use_column_width=True)
 
 st.markdown(
 "<p style='text-align: justify; color:white; font-size:18px'>Com essa breve descrição partiremos para análise dos dados de produção da base do Embrapa conforme sugerido pela Head de dados. Primeiramente, resolvemos separar a base de dados em categórias mais genéricas. Elas são divididas em quatro: Vinho de mesa, Vinho Fino de Mesa, Suco e Derivados. A partir desse gráfico, conseguimos ter uma ideia dos últimos 15 anos qual das categorias é mais produzida dentre as presentes nessa análise:</p>",  unsafe_allow_html=True
     )
-
+    
 dados = pd.read_csv('data/producao.csv', sep=';', encoding='ISO-8859-1')
 dados_gerais = dados.drop('id', axis=1)
 dados_gerais = dados_gerais.query('(produto == "VINHO DE MESA") | (produto == "VINHO FINO DE MESA (VINÃFERA)") | (produto == "SUCO") | (produto == "DERIVADOS")')
