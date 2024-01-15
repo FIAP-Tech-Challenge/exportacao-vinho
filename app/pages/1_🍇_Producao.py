@@ -85,14 +85,27 @@ with tab6:
 st.markdown(
 "<p style='text-align: justify; color:white; font-size:18px'>Com essa breve descrição partiremos para análise dos dados de produção da base do Embrapa conforme sugerido pela Head de dados. Primeiramente, resolvemos separar a base de dados em categórias mais genéricas. Elas são divididas em quatro: Vinho de mesa, Vinho Fino de Mesa, Suco e Derivados. A partir desse gráfico, conseguimos ter uma ideia dos últimos 15 anos qual das categorias é mais produzida dentre as presentes nessa análise:</p>",  unsafe_allow_html=True
     )
-    
-dados = pd.read_csv('data/producao.csv', sep=';', encoding='ISO-8859-1')
-dados_gerais = dados.drop('id', axis=1)
-dados_gerais = dados_gerais.query('(produto == "VINHO DE MESA") | (produto == "VINHO FINO DE MESA (VINÃFERA)") | (produto == "SUCO") | (produto == "DERIVADOS")')
-dados_gerais = dados_gerais.reset_index(drop=True)
-dados_gerais = dados_gerais.set_index('produto')
-dados_gerais.index = ['VINHO DE MESA', 'VINHO FINO DE MESA', 'SUCO', 'DERIVADOS']
-dados_gerais_milhares = dados_gerais / 1000000
+
+url_prod = 'https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/producao.csv'
+    response_prod = requests.get(url_prod)     
+    if response_prod.status_code == 200:
+        # Assuming it's a text file
+        content = response_prod.text
+
+        # Now, you can work with the content as needed
+        with open('file_prod.csv', 'w') as local_file_prod:
+            local_file_prod.write(content)
+    else:
+        print(f"Failed to download file. Status code: {response_prod.status_code}")   
+
+with open(local_file_prod.name) as file:
+    dados = pd.read_csv(file, sep=';', encoding='ISO-8859-1')
+    dados_gerais = dados.drop('id', axis=1)
+    dados_gerais = dados_gerais.query('(produto == "VINHO DE MESA") | (produto == "VINHO FINO DE MESA (VINÃFERA)") | (produto == "SUCO") | (produto == "DERIVADOS")')
+    dados_gerais = dados_gerais.reset_index(drop=True)
+    dados_gerais = dados_gerais.set_index('produto')
+    dados_gerais.index = ['VINHO DE MESA', 'VINHO FINO DE MESA', 'SUCO', 'DERIVADOS']
+    dados_gerais_milhares = dados_gerais / 1000000
 
 st.markdown(
 "<p style='text-align: center; color:white; font-size:16px'>Produção em Milhões de Litros de produtos feitos com uva</p>",  unsafe_allow_html=True
