@@ -4,6 +4,7 @@ import numpy as np
 import plotly.express as px
 import urllib.request
 from PIL import Image
+import requests
 
 st.markdown("<p style='text-align: center; color:MediumPurple; font-size:54px'> Produção de Vinhedos 🍇 </p>",  unsafe_allow_html=True)
 
@@ -87,16 +88,16 @@ st.markdown(
     )
 
 url_prod = 'https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/producao.csv'
-    response_prod = requests.get(url_prod)     
-    if response_prod.status_code == 200:
-        # Assuming it's a text file
-        content = response_prod.text
+response_prod = requests.get(url_prod)     
+if response_prod.status_code == 200:
+    # Assuming it's a text file
+    content = response_prod.text
 
-        # Now, you can work with the content as needed
-        with open('file_prod.csv', 'w') as local_file_prod:
-            local_file_prod.write(content)
-    else:
-        print(f"Failed to download file. Status code: {response_prod.status_code}")   
+    # Now, you can work with the content as needed
+    with open('file_prod.csv', 'w') as local_file_prod:
+        local_file_prod.write(content)
+else:
+    print(f"Failed to download file. Status code: {response_prod.status_code}")   
 
 with open(local_file_prod.name) as file:
     dados = pd.read_csv(file, sep=';', encoding='ISO-8859-1')
@@ -104,7 +105,7 @@ with open(local_file_prod.name) as file:
     dados_gerais = dados_gerais.query('(produto == "VINHO DE MESA") | (produto == "VINHO FINO DE MESA (VINÃFERA)") | (produto == "SUCO") | (produto == "DERIVADOS")')
     dados_gerais = dados_gerais.reset_index(drop=True)
     dados_gerais = dados_gerais.set_index('produto')
-    dados_gerais.index = ['VINHO DE MESA', 'VINHO FINO DE MESA', 'SUCO', 'DERIVADOS']
+    dados_gerais.index = ['VINHO DE MESA', 'VINHO FINO DE MESA', 'SUCO']
     dados_gerais_milhares = dados_gerais / 1000000
 
 st.markdown(
