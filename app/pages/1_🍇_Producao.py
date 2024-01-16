@@ -102,10 +102,10 @@ else:
 with open(local_file_prod.name) as file:
     dados = pd.read_csv(file, sep=';', encoding='ISO-8859-1')
     dados_gerais = dados.drop('id', axis=1)
-    dados_gerais = dados_gerais.query('(produto == "VINHO DE MESA") | (produto == "VINHO FINO DE MESA (VINÃFERA)") | (produto == "SUCO") | (produto == "DERIVADOS")')
+    dados_gerais = dados_gerais.query('(produto == "VINHO DE MESA") | (produto == "VINHO FINO DE MESA (VINIFERA)") | (produto == "SUCO") | (produto == "DERIVADOS")')
     dados_gerais = dados_gerais.reset_index(drop=True)
     dados_gerais = dados_gerais.set_index('produto')
-    dados_gerais.index = ['VINHO DE MESA', 'VINHO FINO DE MESA', 'SUCO']
+    dados_gerais.index = ['VINHO DE MESA', 'VINHO FINO DE MESA (VINIFERA)', 'SUCO','DERIVADOS']
     dados_gerais_milhares = dados_gerais / 1000000
 
 st.markdown(

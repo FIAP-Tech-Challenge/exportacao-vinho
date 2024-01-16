@@ -138,7 +138,7 @@ def header() -> None:
     )
 
     st.markdown(
-        "<p style='text-align: center; color:gray; font-size:18px'><b>Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True
+        "<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True
     )
     st.markdown(
          "<p style='text-align: justify; color:gray; font-size:18px'>Nesta breve introdução, percebemos que na década de 90, os Estados Unidos apresentou ser o principal parceiro comercial, porém houve um decréscimo nos últimos anos. </p>",  unsafe_allow_html=True
