@@ -26,12 +26,12 @@ if response_exp.status_code == 200:
     content = response_exp.text
 
     # Now, you can work with the content as needed
-    with open('file_exp.csv', 'w') as local_file_exp:
+    with open('file_exp.csv', 'w', encoding="utf-8") as local_file_exp:
         local_file_exp.write(content)
 else:
     print(f"Failed to download file. Status code: {response_exp.status_code}")   
 
-with open(local_file_exp.name) as file:
+with open(local_file_exp.name, encoding="utf-8") as file:
     df = pd.read_csv(file, sep=';', skiprows = 1)
 
 @st.cache_data
@@ -100,7 +100,7 @@ paises_sem_russia = ['Paraguai',	'Estados Unidos',	'China',	'Espanha',	'Haiti',	
 df_filtrado_sem_russia  = df_vinho_quantidade[df_vinho_quantidade['País de destino'].isin(paises_sem_russia)]
 df_filtrado_sem_russia = df_filtrado_sem_russia.sort_values(by="valor", ascending=False)
 
-st.markdown(f'Tabela de exportação e valores de quantidade em litros de vinho e receita em dólares do período de 2007 à 2022 ')
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Tabela de exportação e valores de quantidade em litros de vinho e receita em dólares do período de 2007 à 2022 ", unsafe_allow_html=True)
 st.dataframe(df_paises_expressivos)
 
 ##Gráficos 
@@ -178,7 +178,7 @@ with aba1:
         st.metric ('Receita', formata_numero(df_agrupado_ano['valor'].sum(), 'US$'))
         st.plotly_chart(fig_valor_anual, use_container_width = True)
     with coluna2:
-            st.write(' 💡 Análise: É notado que as receitas dos anos de 2009 e 2013 foram os anos mais expressivos até 2020. Ano de 2013 foi o ano com o maior valor de receita em todo o período. Deve-se levar em consideração que no ano de 2010 obteve-se a maior queda em todo o período assim como o ano de 2015. a partir do ano de 2016 a exportação de vinhos apresentou melhoras ano após ano, com o ano de 2022 tomando o lugar de 2009 como o segundo ano mais lucrativo do período.')
+        st.write("<p style='text-align: justify; color:gray; font-size:18px'> 💡 Análise: É notado que as receitas dos anos de 2009 e 2013 foram os anos mais expressivos até 2020. Ano de 2013 foi o ano com o maior valor de receita em todo o período. Deve-se levar em consideração que no ano de 2010 obteve-se a maior queda em todo o período assim como o ano de 2015. a partir do ano de 2016 a exportação de vinhos apresentou melhoras ano após ano, com o ano de 2022 tomando o lugar de 2009 como o segundo ano mais lucrativo do período.",  unsafe_allow_html=True)
 
 
 with aba2:
@@ -187,42 +187,42 @@ with aba2:
         st.metric ('Litros exportados', formata_numero(df_vinho_quantidade['valor'].sum()))
         st.plotly_chart(fig_quantidade_anual, use_container_width = True)
     with coluna2:
-        st.write('💡 Análise: A exportação dos anos de 2009 e 2013 foram os mais expressivos em todo o período. No entanto o ano de 2009 foi o ano em que se teve a maior quantidade de vinhos de mesa exportado e ano de 2013 menor comparado ao ano de 2009.')
+        st.write("<p style='text-align: justify; color:gray; font-size:18px'> 💡 Análise: A exportação dos anos de 2009 e 2013 foram os mais expressivos em todo o período. No entanto o ano de 2009 foi o ano em que se teve a maior quantidade de vinhos de mesa exportado e ano de 2013 menor comparado ao ano de 2009.",  unsafe_allow_html=True)
     
 with aba3:
     coluna1,coluna2 = st.columns(2)
     with coluna1:
             st.plotly_chart(fig_valor_paises, use_container_width = True)
     with coluna2:
-            st.write('💡 Análise: É perceptível que os países que tiveram maior contribuição na receita de exportação foram Paraguai e Rússia, os demais países tiveram uma participacão menor comparado aos mesmos no período.')
+            st.write("<p style='text-align: justify; color:gray; font-size:18px'> '💡 Análise: É perceptível que os países que tiveram maior contribuição na receita de exportação foram Paraguai e Rússia, os demais países tiveram uma participacão menor comparado aos mesmos no período.",  unsafe_allow_html=True)
            
 with aba4:
     coluna1,coluna2 = st.columns(2)
     with coluna1:
             st.plotly_chart(fig_quantidade_paises, use_container_width = True)
     with coluna2:
-            st.write('💡 Análise: A Rússia foi o país que exportou a maior quantidade em litros de vinho no período de 2007 à 2022 mas mesmo assim não foi o país com a maior receita, tal razão para isso pode ser melhor detalhado nas próximas abas')       
+            st.write("<p style='text-align: justify; color:gray; font-size:18px'> '💡 Análise: A Rússia foi o país que exportou a maior quantidade em litros de vinho no período de 2007 à 2022 mas mesmo assim não foi o país com a maior receita, tal razão para isso pode ser melhor detalhado nas próximas abas",  unsafe_allow_html=True)       
 
 with aba5:
     coluna1,coluna2 = st.columns(2)
     with coluna1:
             st.plotly_chart(fig_outlier_com_russia )    
     with  coluna2:
-            st.write('💡 Análise: A Rússia embora tenha contribuído significativamente no perído dos últimos 15 anos com a exportação do vinho no Brasil, pode ser considerada como um outlier(dados que se diferenciam drasticamente de todos os outros) pois ao analisar seus dados é possível verificar que os valores mais expressivos concentram-se apenas nos anos de 2008,2009,2012 e 2013. A partir do ano de 2014 até o momento seus valores foram reduzidos drasticamente. Vale ressaltar que a Rússia detém 43,05 por cento das exportações de vinho de todo o período.')   
+            st.write("<p style='text-align: justify; color:gray; font-size:18px'> '💡 Análise: A Rússia embora tenha contribuído significativamente no perído dos últimos 15 anos com a exportação do vinho no Brasil, pode ser considerada como um outlier(dados que se diferenciam drasticamente de todos os outros) pois ao analisar seus dados é possível verificar que os valores mais expressivos concentram-se apenas nos anos de 2008,2009,2012 e 2013. A partir do ano de 2014 até o momento seus valores foram reduzidos drasticamente. Vale ressaltar que a Rússia detém 43,05 por cento das exportações de vinho de todo o período.",  unsafe_allow_html=True)   
 
 with aba6:
     coluna1,coluna2 = st.columns(2)
     with coluna1:
             st.plotly_chart(fig_outlier_sem_russia )
     with coluna2:
-            st.write('💡 Análise: O Paraguai destaca-se pelos valores mais significativos ao analisarmos a evolução anual. A partir de 2017, registra um crescimento exponencial, caracterizado por variações positivas em todos os anos, com exceção de 2019. Neste ano, o país enfrentou uma crise política que resultou em uma redução nos valores de exportação. Tal fato deve ser creditado pelo fato do país pertencer ao bloco econômico MERCOSUL (Mercado Comum do Sul) composto por Argentina, Brasil, Paraguai e Uruguai que têm por objetivo promover o comércio, com políticas e acordos que facilitem as trocas entre os participantes.')
+            st.write("<p style='text-align: justify; color:gray; font-size:18px'> '💡 Análise: O Paraguai destaca-se pelos valores mais significativos ao analisarmos a evolução anual. A partir de 2017, registra um crescimento exponencial, caracterizado por variações positivas em todos os anos, com exceção de 2019. Neste ano, o país enfrentou uma crise política que resultou em uma redução nos valores de exportação. Tal fato deve ser creditado pelo fato do país pertencer ao bloco econômico MERCOSUL (Mercado Comum do Sul) composto por Argentina, Brasil, Paraguai e Uruguai que têm por objetivo promover o comércio, com políticas e acordos que facilitem as trocas entre os participantes.",  unsafe_allow_html=True)
 
 with aba7:
       coluna1,coluna2 = st.columns(2)
       with coluna1:
             st.plotly_chart(fig_comparacao_medidas )
       with coluna2:
-            st.write('💡 Análise: A partir de 2010, observamos que a tendência da linha de valor supera consistentemente a linha de quantidade, e essa dinâmica persiste até a data mais recente. Essa situação pode ser atribuída ao aumento contínuo do valor do dólar a partir de 2010, exercendo um impacto direto em todas as transações comerciais, bem como o aumento das taxas de exportação contribuindo nesse cenário.')
+            st.write("<p style='text-align: justify; color:gray; font-size:18px'> '💡 Análise: A partir de 2010, observamos que a tendência da linha de valor supera consistentemente a linha de quantidade, e essa dinâmica persiste até a data mais recente. Essa situação pode ser atribuída ao aumento contínuo do valor do dólar a partir de 2010, exercendo um impacto direto em todas as transações comerciais, bem como o aumento das taxas de exportação contribuindo nesse cenário.",  unsafe_allow_html=True)
 
 #BOTAO DOWNLOAD
                       

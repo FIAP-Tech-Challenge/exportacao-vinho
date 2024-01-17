@@ -109,7 +109,7 @@ with open(local_file_prod.name) as file:
     dados_gerais_milhares = dados_gerais / 1000000
 
 st.markdown(
-"<p style='text-align: center; color:gray; font-size:16px'>Produção em Milhões de Litros de produtos feitos com uva</p>",  unsafe_allow_html=True
+"<p style='text-align: center; color:gray; font-size:18px'>Produção em Milhões de Litros de produtos feitos com uva</p>",  unsafe_allow_html=True
     )
 
 st.line_chart(dados_gerais_milhares.T.loc['2007':])
@@ -163,7 +163,7 @@ st.markdown(
     )
 
 st.markdown(
-"<p style='text-align: center; color:gray; font-size:16px'>Precipitação Total (mm) por ano em Porto Alegre - RS</p>",  unsafe_allow_html=True
+"<p style='text-align: center; color:gray; font-size:18px'>Precipitação Total (mm) por ano em Porto Alegre - RS</p>",  unsafe_allow_html=True
     )
 st.bar_chart(data=df_imet_tratado, x='Ano', y='Precipitacao_Total')
 
@@ -172,7 +172,7 @@ st.markdown(
     )
 
 st.markdown(
-"<p style='text-align: center; color:gray; font-size:16px'>Umidade média por ano em Porto Alegre - RS</p>",  unsafe_allow_html=True
+"<p style='text-align: center; color:gray; font-size:18px'>Umidade média por ano em Porto Alegre - RS</p>",  unsafe_allow_html=True
     )
 st.bar_chart(data=df_imet_tratado, x='Ano', y='Umidade_Media_%')
 
@@ -194,7 +194,7 @@ df_vinho_mesa_milhares['2017'][1] = 36.121245
 df_vinho_mesa_milhares['2017'][2] = 1.365957
 
 st.markdown(
-"<p style='text-align: center; color:gray; font-size:16px'>Produção em Milhões de Litros de vinhos de mesa</p>",  unsafe_allow_html=True
+"<p style='text-align: center; color:gray; font-size:18px'>Produção em Milhões de Litros de vinhos de mesa</p>",  unsafe_allow_html=True
     )
 st.line_chart(df_vinho_mesa_milhares.T.loc['2007':])
 
