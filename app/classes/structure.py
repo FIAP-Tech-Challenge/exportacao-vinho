@@ -132,15 +132,20 @@ def struct_description(text: str) -> None:
 
     return None
 
-def header() -> None:
-    st.markdown("<p style='text-align: center; color:violet; font-size:72px'> FIAP - Vinhos </p>",  unsafe_allow_html=True)
-    
+def header() -> None:  
     st.markdown(
-        "<p style='text-align: center; color:white; font-size:24px'> Somos a empresa número 1 que mais exporta vinhos do Brasil para o mundo. </p>",  unsafe_allow_html=True
+        "<p style='text-align: center; color:purple;font-size:54px'> Somos a empresa nº 1 do Brasil. </p>",  unsafe_allow_html=True
     )
 
     st.markdown(
-        """ :gray[Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais.]"""
+        "<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True
+    )
+    st.markdown(
+         "<p style='text-align: justify; color:gray; font-size:18px'>Nesta breve introdução, percebemos que na década de 90, os Estados Unidos apresentou ser o principal parceiro comercial, porém houve um decréscimo nos últimos anos. </p>",  unsafe_allow_html=True
+    )
+    
+    st.markdown(
+        "<p style='text-align: justify; color:gray; font-size:18px'>Entre 2013, a Rússia, destaca-se como um outlier em nossa análise.. </p>",  unsafe_allow_html=True
     )
     st.markdown(    
         """**Fonte de Dados:** [Banco de dados de uva, vinho e derivados](http://vitibrasil.cnpuv.embrapa.br/)"""
@@ -176,16 +181,19 @@ def header() -> None:
     return None
 
 def tab_intro(df: pl.DataFrame) -> None:
-    config_graph = {}
-    config_graph["col_name"] = "value"
-    config_graph["metric"] = "Valor Exportado"
-    config_graph["viz"] = "Visualização"
+    config_graph_3 = {}
+    config_graph_3["col_name"] = "value"
+    config_graph_3["metric"] = "Valor Exportado"
+    config_graph_3["viz"] = "Visualização"
     
-    cols1, cols2 = st.columns(spec=[2, 2])
-    with cols1:
-        st.plotly_chart(g.graph_3(df, config_graph))
-    with cols2:
-        st.plotly_chart(g.graph_globe(df), use_container_width=True)
+    config_graph_1 = {}
+    config_graph_1['metric'] = "Valor Exportado"
+    config_graph_1['agg'] = "Valor Total"
+
+    st.plotly_chart(g.graph_1(df,config_graph_1))
+    st.plotly_chart(g.graph_3(df, config_graph_3))
+    st.plotly_chart(g.graph_globe(df), use_container_width=True)
+
 
     st.markdown(
         """
