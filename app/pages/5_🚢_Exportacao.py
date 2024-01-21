@@ -100,7 +100,7 @@ paises_sem_russia = ['Paraguai',	'Estados Unidos',	'China',	'Espanha',	'Haiti',	
 df_filtrado_sem_russia  = df_vinho_quantidade[df_vinho_quantidade['País de destino'].isin(paises_sem_russia)]
 df_filtrado_sem_russia = df_filtrado_sem_russia.sort_values(by="valor", ascending=False)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Tabela de exportação e valores de quantidade em litros de vinho e receita em dólares do período de 2007 à 2022 ", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color:gray; font-size:24px'>Tabela de exportação e valores de quantidade em litros de vinho e receita em dólares do período de 2007 à 2022 ", unsafe_allow_html=True)
 st.dataframe(df_paises_expressivos)
 
 ##Gráficos 
