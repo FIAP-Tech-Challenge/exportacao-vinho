@@ -19,7 +19,7 @@ def tab_intro(df: pl.DataFrame) -> None:
     st.markdown(
         """
         ###### Tabela com informações sobre a importação de vinho
-        Tabela contém informações sobre a importação de vinho, como país de origem e de destino, ano de referência, quantidade de vinho exportado (em litros) e valor total exportado (em US$)
+        Tabela contém informações sobre a importação de vinho, como país de origem e de destino, ano de referência, quantidade de vinho importado (em litros) e valor total importado (em US$)
         """
     )
     st.dataframe(table_info(df), use_container_width=True)
@@ -188,8 +188,8 @@ def graph(df: pl.DataFrame, config:dict) -> None:
                 "title": "Valor Total Importado nos Anos de Referência",
                 "sup": "Gráfico de Linha exibindo o valor total de vinho importado (em US$) por país ao longo do tempo",
             },
-            "Litros Exportados": {
-                "yaxis": {"title": "Total de Vinho Exportados (Litros)"},
+            "Litros Importados": {
+                "yaxis": {"title": "Total de Vinho Importados (Litros)"},
                 "hovertemplate": "<b>%{x}</b><br>%{y} Litros",
                 "title": "Total de Vinho Importados nos Anos de Referência",
                 "sup": "Gráfico de Linha exibindo o volume total de vinho importado (em litros) por país ao longo do tempo",
