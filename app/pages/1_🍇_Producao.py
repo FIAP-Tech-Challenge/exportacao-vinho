@@ -202,4 +202,4 @@ st.markdown(
 "<p style='text-align: justify; color:gray; font-size:18px'> Assim como constatado no gráfico das categorias gerais anteriormente, vemos que a queda de produção em 2016 se confirma mais uma vez. Veremos se esse mesmo efeito ocorre com a comercialização de vinhos.</p>",  unsafe_allow_html=True
     )
 
-st.link_button('Comercialização de Vinhos', https://exportacao-vinho.streamlit.app/Comercializacao, use_container_width=True)
+st.link_button('Comercialização de Vinhos', "https://exportacao-vinho.streamlit.app/Comercializacao", use_container_width=True)
