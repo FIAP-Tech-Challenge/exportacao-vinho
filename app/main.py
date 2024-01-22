@@ -11,11 +11,11 @@ st.set_page_config(
 st.markdown("<p style='text-align: center; color:purple; font-size:54px'> Bem vindo a nossa página 👋 </p>",  unsafe_allow_html=True)
 
 st.markdown(
-        "<p style='text-align: center; color:gray; font-size:24px'><b> Lideramos o mercado nacional nos quesitos de Produção, Processamento, Comercialização, Importação e Exportação de vinhos</b> </p>",  unsafe_allow_html=True
+        "<p style='text-align: center; color:gray; font-size:24px'><b> O Tech Challenge – FIAP é o projeto que integra os conhecimentos adquiridos na fase 1 do curso Data Analytics.</b> </p>",  unsafe_allow_html=True
     )
 
 st.markdown(
-"<p style='text-align: justify; color:gray; font-size:18px'> Essa página tem o intuito de demonstrar a administração geral da empresa fatores que possam influenciar diretamente e indiretamente a cadeia produtiva de vinhos, desde a produção das safras até a exportação. </p>",  unsafe_allow_html=True
+"<p style='text-align: justify; color:gray; font-size:18px'> Somos uma empresa especializada na exportação de vinhos brasileiros para mercados globais. Nossa equipe de Data Analytics desempenha um papel crucial na geração de relatórios iniciais, os quais apresentaremos aos acionistas e investidores. Esses relatórios destacam nosso potencial de mercado e identifica oportunidades para novos negócios. Estamos comprometidos em fornecer análises abrangentes que respaldam decisões estratégicas e impulsionam o crescimento sustentável da nossa empresa. </p>",  unsafe_allow_html=True
     )
 
 st.markdown(
@@ -28,6 +28,10 @@ with urllib.request.urlopen(url) as url_obj:
     img = np.array(Image.open(url_obj))
     st.image(img, width=400, caption='Fonte: Imagem de sergiorojoes no Freepik', use_column_width=True)
 
-st.markdown(    
-    """**Veja nossa revista:** [FIAP Tech Challenge](https://my.visme.co/view/1jkord63-new-project)"""
-)
+st.markdown(
+"<p style='text-align: justify; color:gray; font-size:18px'> Convido você a conhecer um pouco do processo de produção de vinhedos</p>",  unsafe_allow_html=True
+    )
+
+#st.markdown(    
+#    """**Veja nossa revista:** [FIAP Tech Challenge](https://my.visme.co/view/1jkord63-new-project)"""
+#)
