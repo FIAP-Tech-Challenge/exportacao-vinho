@@ -29,8 +29,10 @@ with urllib.request.urlopen(url) as url_obj:
     st.image(img, width=400, caption='Fonte: Imagem de sergiorojoes no Freepik', use_column_width=True)
 
 st.markdown(
-"<p style='text-align: justify; color:gray; font-size:18px'> Convido você a conhecer um pouco do processo de produção de vinhedos</p>",  unsafe_allow_html=True
+"<p style='text-align: center; color:gray; font-size:18px'> Convido você a conhecer um pouco do processo de produção de vinhedos</p>",  unsafe_allow_html=True
     )
+
+st.link_button('Produção de Vinhedos', https://exportacao-vinho.streamlit.app/Producao, use_container_width=True)
 
 #st.markdown(    
 #    """**Veja nossa revista:** [FIAP Tech Challenge](https://my.visme.co/view/1jkord63-new-project)"""

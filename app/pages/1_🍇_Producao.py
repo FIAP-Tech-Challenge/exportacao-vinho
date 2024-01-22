@@ -199,5 +199,7 @@ st.markdown(
 st.line_chart(df_vinho_mesa_milhares.T.loc['2007':])
 
 st.markdown(
-"<p style='text-align: justify; color:gray; font-size:18px'>Assim como constatado no gráfico das categorias gerais anteriormente, vemos que a queda de produção em 2016 se confirma mais uma vez. Para prosseguir com nossa análise, iremos nos aprofundar nos vinhos de mesa que representa a maior parte da produção e veremos posteriormente a sua importância na exportação conforme solicitado nessa primeira fase do Tech Challenge.</p>",  unsafe_allow_html=True
+"<p style='text-align: justify; color:gray; font-size:18px'> Assim como constatado no gráfico das categorias gerais anteriormente, vemos que a queda de produção em 2016 se confirma mais uma vez. Veremos se esse mesmo efeito ocorre com a comercialização de vinhos.</p>",  unsafe_allow_html=True
     )
+
+st.link_button('Comercialização de Vinhos', https://exportacao-vinho.streamlit.app/Comercializacao, use_container_width=True)
