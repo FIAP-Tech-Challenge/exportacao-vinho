@@ -32,7 +32,7 @@ st.markdown(
 "<p style='text-align: center; color:gray; font-size:18px'> Convido você a conhecer um pouco do processo de produção de vinhedos</p>",  unsafe_allow_html=True
     )
 
-st.link_button('Produção de Vinhedos', https://exportacao-vinho.streamlit.app/Producao, use_container_width=True)
+st.link_button('Produção de Vinhedos', "https://exportacao-vinho.streamlit.app/Producao", use_container_width=True)
 
 #st.markdown(    
 #    """**Veja nossa revista:** [FIAP Tech Challenge](https://my.visme.co/view/1jkord63-new-project)"""

@@ -88,7 +88,8 @@ def graph_1(df: pl.DataFrame, config: dict) -> None:
     func = pl.sum if config['agg'] == "Valor Total" else pl.mean
 
     df_aux = df.group_by("country").agg(func(var)).sort(var, descending=True)
-    fig = px.bar(df_aux, x="country", y=var)
+    df_aux2 = df_aux.head(10)
+    fig = px.bar(df_aux2, x="country", y=var)
 
     layout_info = {
         "Valor Importado": {
