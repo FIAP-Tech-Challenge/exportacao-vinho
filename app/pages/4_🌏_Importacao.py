@@ -8,9 +8,9 @@ st.markdown("<p style='text-align: center; color:purple;font-size:54px'> Importa
 
 st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Nesta breve introdução, percebemos que na década de 90, os Estados Unidos apresentou ser o principal parceiro comercial, porém houve um decréscimo nos últimos anos. </p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Nesta breve introdução, percebemos que o Chile apresentou ser o principal exportador, seguido por Portugal, França, Alemanha e EUA. </p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2013, a Rússia, destaca-se como um outlier em nossa análise.. </p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2017 a 2019 houve um crescimento no valor total importado. </p>",  unsafe_allow_html=True)
 
 st.markdown("""**Fonte de Dados:** [Banco de dados de uva, vinho e derivados](http://vitibrasil.cnpuv.embrapa.br/)""")
 
