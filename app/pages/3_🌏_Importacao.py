@@ -6,11 +6,11 @@ from classes import funcao as f
 
 st.markdown("<p style='text-align: center; color:purple;font-size:54px'> Importação de Vinhedos 🌏</p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Nesta breve introdução, percebemos que o Chile apresentou ser o principal exportador, seguido por Portugal, França, Alemanha e EUA. </p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2016 e 2019, o Chile se destacou como um dos principais países na importação de vinhos para o Brasil, alcançando um valor significativo de 1 milhão de dólares. Esse aumento foi impulsionado pelo fenômeno climático El Niño, que gerou uma demanda crescente no mercado. </p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2017 a 2019 houve um crescimento no valor total importado. </p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Ao analisarmos as possibilidades de parcerias de mercado, a Argentina surge como um potencial parceiro expressivo, com um montante considerável de US$ 752 milhões de dólares e Portugal US$ 654 milhões de dólares. </p>",  unsafe_allow_html=True)
 
 st.markdown("""**Fonte de Dados:** [Banco de dados de uva, vinho e derivados](http://vitibrasil.cnpuv.embrapa.br/)""")
 
