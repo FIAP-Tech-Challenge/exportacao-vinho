@@ -12,8 +12,8 @@ def tab_intro(df: pl.DataFrame) -> None:
     config_graph_1['metric'] = "Valor Importado"
     config_graph_1['agg'] = "Valor Total"
 
-    st.plotly_chart(graph_1(df,config_graph_1))
-    st.plotly_chart(graph(df, config_graph))
+    st.plotly_chart(graph_1(df,config_graph_1), use_container_width=True)
+    st.plotly_chart(graph(df, config_graph), use_container_width=True)
     st.plotly_chart(graph_globe(df), use_container_width=True)
 
     st.markdown(
@@ -149,7 +149,7 @@ def graph(df: pl.DataFrame, config:dict) -> None:
             .group_by("country")
             .agg(pl.sum(col_name))
             .sort(col_name, descending=True)
-            .limit(3)
+            .limit(10)
         )
 
         list_selected = df_list_country.select(pl.col("country")).to_series().to_list()  

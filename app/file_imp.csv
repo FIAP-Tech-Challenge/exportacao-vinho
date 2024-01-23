@@ -1,5 +1,5 @@
 country,year,liters,value,name
-Africa do Sul,1970,0,0,
+Africa do Sul,1970,0,0,South Africa
 Alemanha,1970,52297,30498,Germany
 Argélia,1970,0,0,Algeria
 Arábia Saudita,1970,0,0,Saudi Arabia
@@ -56,7 +56,7 @@ Uruguai,1970,5767,1871,Uruguay
 Não consta na tabela,1970,0,0,
 Não declarados,1970,0,0,
 Outros,1970,5508,4255,
-Africa do Sul,1971,0,0,
+Africa do Sul,1971,0,0,South Africa
 Alemanha,1971,34606,26027,Germany
 Argélia,1971,0,0,Algeria
 Arábia Saudita,1971,0,0,Saudi Arabia
@@ -113,7 +113,7 @@ Uruguai,1971,1917,636,Uruguay
 Não consta na tabela,1971,0,0,
 Não declarados,1971,0,0,
 Outros,1971,77789,42028,
-Africa do Sul,1972,0,0,
+Africa do Sul,1972,0,0,South Africa
 Alemanha,1972,134438,92103,Germany
 Argélia,1972,0,0,Algeria
 Arábia Saudita,1972,0,0,Saudi Arabia
@@ -170,7 +170,7 @@ Uruguai,1972,7394,2741,Uruguay
 Não consta na tabela,1972,0,0,
 Não declarados,1972,0,0,
 Outros,1972,79052,25032,
-Africa do Sul,1973,0,0,
+Africa do Sul,1973,0,0,South Africa
 Alemanha,1973,111523,98638,Germany
 Argélia,1973,0,0,Algeria
 Arábia Saudita,1973,0,0,Saudi Arabia
@@ -227,7 +227,7 @@ Uruguai,1973,0,0,Uruguay
 Não consta na tabela,1973,0,0,
 Não declarados,1973,0,0,
 Outros,1973,4306,5775,
-Africa do Sul,1974,0,0,
+Africa do Sul,1974,0,0,South Africa
 Alemanha,1974,219173,202502,Germany
 Argélia,1974,0,0,Algeria
 Arábia Saudita,1974,0,0,Saudi Arabia
@@ -284,7 +284,7 @@ Uruguai,1974,0,0,Uruguay
 Não consta na tabela,1974,0,0,
 Não declarados,1974,0,0,
 Outros,1974,21501,28163,
-Africa do Sul,1975,0,0,
+Africa do Sul,1975,0,0,South Africa
 Alemanha,1975,134354,149931,Germany
 Argélia,1975,0,0,Algeria
 Arábia Saudita,1975,0,0,Saudi Arabia
@@ -341,7 +341,7 @@ Uruguai,1975,0,0,Uruguay
 Não consta na tabela,1975,0,0,
 Não declarados,1975,0,0,
 Outros,1975,18132,13989,
-Africa do Sul,1976,0,0,
+Africa do Sul,1976,0,0,South Africa
 Alemanha,1976,168134,171308,Germany
 Argélia,1976,0,0,Algeria
 Arábia Saudita,1976,0,0,Saudi Arabia
@@ -398,7 +398,7 @@ Uruguai,1976,0,0,Uruguay
 Não consta na tabela,1976,0,0,
 Não declarados,1976,0,0,
 Outros,1976,10200,7884,
-Africa do Sul,1977,0,0,
+Africa do Sul,1977,0,0,South Africa
 Alemanha,1977,160926,201840,Germany
 Argélia,1977,0,0,Algeria
 Arábia Saudita,1977,0,0,Saudi Arabia
@@ -455,7 +455,7 @@ Uruguai,1977,24191,33975,Uruguay
 Não consta na tabela,1977,0,0,
 Não declarados,1977,0,0,
 Outros,1977,450,642,
-Africa do Sul,1978,0,0,
+Africa do Sul,1978,0,0,South Africa
 Alemanha,1978,437831,668631,Germany
 Argélia,1978,0,0,Algeria
 Arábia Saudita,1978,0,0,Saudi Arabia
@@ -512,7 +512,7 @@ Uruguai,1978,32371,33900,Uruguay
 Não consta na tabela,1978,0,0,
 Não declarados,1978,0,0,
 Outros,1978,1347,1210,
-Africa do Sul,1979,0,0,
+Africa do Sul,1979,0,0,South Africa
 Alemanha,1979,433478,691404,Germany
 Argélia,1979,0,0,Algeria
 Arábia Saudita,1979,0,0,Saudi Arabia
@@ -569,7 +569,7 @@ Uruguai,1979,13320,22900,Uruguay
 Não consta na tabela,1979,0,0,
 Não declarados,1979,0,0,
 Outros,1979,2411,2614,
-Africa do Sul,1980,0,0,
+Africa do Sul,1980,0,0,South Africa
 Alemanha,1980,457033,704307,Germany
 Argélia,1980,0,0,Algeria
 Arábia Saudita,1980,0,0,Saudi Arabia
@@ -626,7 +626,7 @@ Uruguai,1980,8880,16800,Uruguay
 Não consta na tabela,1980,0,0,
 Não declarados,1980,0,0,
 Outros,1980,10446,10543,
-Africa do Sul,1981,0,0,
+Africa do Sul,1981,0,0,South Africa
 Alemanha,1981,707194,853830,Germany
 Argélia,1981,0,0,Algeria
 Arábia Saudita,1981,0,0,Saudi Arabia
@@ -683,7 +683,7 @@ Uruguai,1981,0,0,Uruguay
 Não consta na tabela,1981,0,0,
 Não declarados,1981,0,0,
 Outros,1981,17133,17869,
-Africa do Sul,1982,0,0,
+Africa do Sul,1982,0,0,South Africa
 Alemanha,1982,996948,1126928,Germany
 Argélia,1982,0,0,Algeria
 Arábia Saudita,1982,0,0,Saudi Arabia
@@ -740,7 +740,7 @@ Uruguai,1982,0,0,Uruguay
 Não consta na tabela,1982,0,0,
 Não declarados,1982,0,0,
 Outros,1982,22104,30505,
-Africa do Sul,1983,0,0,
+Africa do Sul,1983,0,0,South Africa
 Alemanha,1983,850055,908380,Germany
 Argélia,1983,0,0,Algeria
 Arábia Saudita,1983,0,0,Saudi Arabia
@@ -797,7 +797,7 @@ Uruguai,1983,0,0,Uruguay
 Não consta na tabela,1983,0,0,
 Não declarados,1983,0,0,
 Outros,1983,6738,5862,
-Africa do Sul,1984,0,0,
+Africa do Sul,1984,0,0,South Africa
 Alemanha,1984,586645,564129,Germany
 Argélia,1984,0,0,Algeria
 Arábia Saudita,1984,0,0,Saudi Arabia
@@ -854,7 +854,7 @@ Uruguai,1984,0,0,Uruguay
 Não consta na tabela,1984,0,0,
 Não declarados,1984,0,0,
 Outros,1984,26490,34499,
-Africa do Sul,1985,0,0,
+Africa do Sul,1985,0,0,South Africa
 Alemanha,1985,1069717,1122438,Germany
 Argélia,1985,0,0,Algeria
 Arábia Saudita,1985,0,0,Saudi Arabia
@@ -911,7 +911,7 @@ Uruguai,1985,0,0,Uruguay
 Não consta na tabela,1985,0,0,
 Não declarados,1985,0,0,
 Outros,1985,5400,12812,
-Africa do Sul,1986,0,0,
+Africa do Sul,1986,0,0,South Africa
 Alemanha,1986,2357113,3008737,Germany
 Argélia,1986,0,0,Algeria
 Arábia Saudita,1986,0,0,Saudi Arabia
@@ -968,7 +968,7 @@ Uruguai,1986,0,0,Uruguay
 Não consta na tabela,1986,0,0,
 Não declarados,1986,0,0,
 Outros,1986,15717,18768,
-Africa do Sul,1987,0,0,
+Africa do Sul,1987,0,0,South Africa
 Alemanha,1987,1307519,1863924,Germany
 Argélia,1987,0,0,Algeria
 Arábia Saudita,1987,0,0,Saudi Arabia
@@ -1025,7 +1025,7 @@ Uruguai,1987,0,0,Uruguay
 Não consta na tabela,1987,0,0,
 Não declarados,1987,0,0,
 Outros,1987,28,40,
-Africa do Sul,1988,0,0,
+Africa do Sul,1988,0,0,South Africa
 Alemanha,1988,2029271,2757417,Germany
 Argélia,1988,0,0,Algeria
 Arábia Saudita,1988,0,0,Saudi Arabia
@@ -1082,7 +1082,7 @@ Uruguai,1988,0,0,Uruguay
 Não consta na tabela,1988,0,0,
 Não declarados,1988,0,0,
 Outros,1988,435,450,
-Africa do Sul,1989,0,0,
+Africa do Sul,1989,0,0,South Africa
 Alemanha,1989,2885143,4074739,Germany
 Argélia,1989,0,0,Algeria
 Arábia Saudita,1989,0,0,Saudi Arabia
@@ -1139,7 +1139,7 @@ Uruguai,1989,0,0,Uruguay
 Não consta na tabela,1989,0,0,
 Não declarados,1989,0,0,
 Outros,1989,10788,21458,
-Africa do Sul,1990,0,0,
+Africa do Sul,1990,0,0,South Africa
 Alemanha,1990,3342223,5875679,Germany
 Argélia,1990,0,0,Algeria
 Arábia Saudita,1990,0,0,Saudi Arabia
@@ -1196,7 +1196,7 @@ Uruguai,1990,0,0,Uruguay
 Não consta na tabela,1990,0,0,
 Não declarados,1990,0,0,
 Outros,1990,65835,145083,
-Africa do Sul,1991,0,0,
+Africa do Sul,1991,0,0,South Africa
 Alemanha,1991,3096425,4545305,Germany
 Argélia,1991,0,0,Algeria
 Arábia Saudita,1991,0,0,Saudi Arabia
@@ -1253,7 +1253,7 @@ Uruguai,1991,0,0,Uruguay
 Não consta na tabela,1991,0,0,
 Não declarados,1991,0,0,
 Outros,1991,97662,161151,
-Africa do Sul,1992,0,0,
+Africa do Sul,1992,0,0,South Africa
 Alemanha,1992,2515557,3644055,Germany
 Argélia,1992,0,0,Algeria
 Arábia Saudita,1992,0,0,Saudi Arabia
@@ -1310,7 +1310,7 @@ Uruguai,1992,11247,21795,Uruguay
 Não consta na tabela,1992,0,0,
 Não declarados,1992,0,0,
 Outros,1992,24465,59352,
-Africa do Sul,1993,0,0,
+Africa do Sul,1993,0,0,South Africa
 Alemanha,1993,5721360,7155615,Germany
 Argélia,1993,0,0,Algeria
 Arábia Saudita,1993,0,0,Saudi Arabia
@@ -1367,7 +1367,7 @@ Uruguai,1993,33040,69221,Uruguay
 Não consta na tabela,1993,0,0,
 Não declarados,1993,0,0,
 Outros,1993,146730,412893,
-Africa do Sul,1994,0,0,
+Africa do Sul,1994,0,0,South Africa
 Alemanha,1994,11047710,16068528,Germany
 Argélia,1994,0,0,Algeria
 Arábia Saudita,1994,0,0,Saudi Arabia
@@ -1424,7 +1424,7 @@ Uruguai,1994,35219,72528,Uruguay
 Não consta na tabela,1994,0,0,
 Não declarados,1994,0,0,
 Outros,1994,174758,289230,
-Africa do Sul,1995,0,0,
+Africa do Sul,1995,0,0,South Africa
 Alemanha,1995,11919346,19758144,Germany
 Argélia,1995,0,0,Algeria
 Arábia Saudita,1995,0,0,Saudi Arabia
@@ -1481,7 +1481,7 @@ Uruguai,1995,33150,73695,Uruguay
 Não consta na tabela,1995,0,0,
 Não declarados,1995,0,0,
 Outros,1995,200336,393140,
-Africa do Sul,1996,0,0,
+Africa do Sul,1996,0,0,South Africa
 Alemanha,1996,8680860,10629243,Germany
 Argélia,1996,0,0,Algeria
 Arábia Saudita,1996,0,0,Saudi Arabia
@@ -1538,7 +1538,7 @@ Uruguai,1996,72000,164299,Uruguay
 Não consta na tabela,1996,63755,148879,
 Não declarados,1996,21185,26664,
 Outros,1996,127039,295772,
-Africa do Sul,1997,0,0,
+Africa do Sul,1997,0,0,South Africa
 Alemanha,1997,4867017,5108215,Germany
 Argélia,1997,0,0,Algeria
 Arábia Saudita,1997,0,0,Saudi Arabia
@@ -1595,7 +1595,7 @@ Uruguai,1997,89117,209952,Uruguay
 Não consta na tabela,1997,0,0,
 Não declarados,1997,0,0,
 Outros,1997,186470,548733,
-Africa do Sul,1998,0,0,
+Africa do Sul,1998,0,0,South Africa
 Alemanha,1998,3014081,4834030,Germany
 Argélia,1998,0,0,Algeria
 Arábia Saudita,1998,0,0,Saudi Arabia
@@ -1652,7 +1652,7 @@ Uruguai,1998,277989,525654,Uruguay
 Não consta na tabela,1998,0,0,
 Não declarados,1998,0,0,
 Outros,1998,187919,480461,
-Africa do Sul,1999,0,0,
+Africa do Sul,1999,0,0,South Africa
 Alemanha,1999,2576557,4539354,Germany
 Argélia,1999,0,0,Algeria
 Arábia Saudita,1999,0,0,Saudi Arabia
@@ -1709,7 +1709,7 @@ Uruguai,1999,1712036,2756398,Uruguay
 Não consta na tabela,1999,0,0,
 Não declarados,1999,0,0,
 Outros,1999,49646,230829,
-Africa do Sul,2000,0,0,
+Africa do Sul,2000,0,0,South Africa
 Alemanha,2000,1164724,1668539,Germany
 Argélia,2000,0,0,Algeria
 Arábia Saudita,2000,0,0,Saudi Arabia
@@ -1766,7 +1766,7 @@ Uruguai,2000,1961733,3616134,Uruguay
 Não consta na tabela,2000,0,0,
 Não declarados,2000,0,0,
 Outros,2000,73451,295205,
-Africa do Sul,2001,42661,99201,
+Africa do Sul,2001,42661,99201,South Africa
 Alemanha,2001,909077,1169872,Germany
 Argélia,2001,0,0,Algeria
 Arábia Saudita,2001,0,0,Saudi Arabia
@@ -1823,7 +1823,7 @@ Uruguai,2001,1668697,3122694,Uruguay
 Não consta na tabela,2001,0,0,
 Não declarados,2001,0,0,
 Outros,2001,47256,201927,
-Africa do Sul,2002,32194,106317,
+Africa do Sul,2002,32194,106317,South Africa
 Alemanha,2002,759712,829695,Germany
 Argélia,2002,0,0,Algeria
 Arábia Saudita,2002,0,0,Saudi Arabia
@@ -1880,7 +1880,7 @@ Uruguai,2002,1247891,2082552,Uruguay
 Não consta na tabela,2002,0,0,
 Não declarados,2002,0,0,
 Outros,2002,64069,256700,
-Africa do Sul,2003,157239,305701,
+Africa do Sul,2003,157239,305701,South Africa
 Alemanha,2003,573198,629664,Germany
 Argélia,2003,0,0,Algeria
 Arábia Saudita,2003,0,0,Saudi Arabia
@@ -1937,7 +1937,7 @@ Uruguai,2003,1096094,1630471,Uruguay
 Não consta na tabela,2003,0,0,
 Não declarados,2003,0,0,
 Outros,2003,0,0,
-Africa do Sul,2004,303489,665101,
+Africa do Sul,2004,303489,665101,South Africa
 Alemanha,2004,420075,550750,Germany
 Argélia,2004,0,0,Algeria
 Arábia Saudita,2004,0,0,Saudi Arabia
@@ -1994,7 +1994,7 @@ Uruguai,2004,660522,1089054,Uruguay
 Não consta na tabela,2004,0,0,
 Não declarados,2004,0,0,
 Outros,2004,0,0,
-Africa do Sul,2005,407413,775421,
+Africa do Sul,2005,407413,775421,South Africa
 Alemanha,2005,253685,382599,Germany
 Argélia,2005,0,0,Algeria
 Arábia Saudita,2005,0,0,Saudi Arabia
@@ -2051,7 +2051,7 @@ Uruguai,2005,512973,924066,Uruguay
 Não consta na tabela,2005,0,0,
 Não declarados,2005,0,0,
 Outros,2005,13970,63967,
-Africa do Sul,2006,358870,1164032,
+Africa do Sul,2006,358870,1164032,South Africa
 Alemanha,2006,314749,634870,Germany
 Argélia,2006,0,0,Algeria
 Arábia Saudita,2006,0,0,Saudi Arabia
@@ -2108,7 +2108,7 @@ Uruguai,2006,715474,1439538,Uruguay
 Não consta na tabela,2006,0,0,
 Não declarados,2006,0,0,
 Outros,2006,0,0,
-Africa do Sul,2007,386425,1320244,
+Africa do Sul,2007,386425,1320244,South Africa
 Alemanha,2007,234006,647626,Germany
 Argélia,2007,0,0,Algeria
 Arábia Saudita,2007,0,0,Saudi Arabia
@@ -2165,7 +2165,7 @@ Uruguai,2007,2387225,3131899,Uruguay
 Não consta na tabela,2007,0,0,
 Não declarados,2007,0,0,
 Outros,2007,0,0,
-Africa do Sul,2008,315380,1151699,
+Africa do Sul,2008,315380,1151699,South Africa
 Alemanha,2008,293935,1063825,Germany
 Argélia,2008,0,0,Algeria
 Arábia Saudita,2008,0,0,Saudi Arabia
@@ -2222,7 +2222,7 @@ Uruguai,2008,920389,2089539,Uruguay
 Não consta na tabela,2008,0,0,
 Não declarados,2008,0,0,
 Outros,2008,0,0,
-Africa do Sul,2009,493093,1931449,
+Africa do Sul,2009,493093,1931449,South Africa
 Alemanha,2009,56075,291876,Germany
 Argélia,2009,0,0,Algeria
 Arábia Saudita,2009,0,0,Saudi Arabia
@@ -2279,7 +2279,7 @@ Uruguai,2009,750343,1953390,Uruguay
 Não consta na tabela,2009,0,0,
 Não declarados,2009,0,0,
 Outros,2009,0,0,
-Africa do Sul,2010,966276,3600658,
+Africa do Sul,2010,966276,3600658,South Africa
 Alemanha,2010,192661,784674,Germany
 Argélia,2010,0,0,Algeria
 Arábia Saudita,2010,0,0,Saudi Arabia
@@ -2336,7 +2336,7 @@ Uruguai,2010,1219387,3175051,Uruguay
 Não consta na tabela,2010,0,0,
 Não declarados,2010,0,0,
 Outros,2010,0,0,
-Africa do Sul,2011,507509,2136394,
+Africa do Sul,2011,507509,2136394,South Africa
 Alemanha,2011,198025,933545,Germany
 Argélia,2011,0,0,Algeria
 Arábia Saudita,2011,0,0,Saudi Arabia
@@ -2393,7 +2393,7 @@ Uruguai,2011,1264306,3481552,Uruguay
 Não consta na tabela,2011,0,0,
 Não declarados,2011,0,0,
 Outros,2011,0,0,
-Africa do Sul,2012,722327,3041449,
+Africa do Sul,2012,722327,3041449,South Africa
 Alemanha,2012,113243,591167,Germany
 Argélia,2012,0,0,Algeria
 Arábia Saudita,2012,0,0,Saudi Arabia
@@ -2450,7 +2450,7 @@ Uruguai,2012,1323884,3735892,Uruguay
 Não consta na tabela,2012,0,0,
 Não declarados,2012,0,0,
 Outros,2012,0,0,
-Africa do Sul,2013,475331,1985184,
+Africa do Sul,2013,475331,1985184,South Africa
 Alemanha,2013,114866,414070,Germany
 Argélia,2013,0,0,Algeria
 Arábia Saudita,2013,0,0,Saudi Arabia
@@ -2507,7 +2507,7 @@ Uruguai,2013,1372329,3740613,Uruguay
 Não consta na tabela,2013,0,0,
 Não declarados,2013,0,0,
 Outros,2013,0,0,
-Africa do Sul,2014,722715,3033932,
+Africa do Sul,2014,722715,3033932,South Africa
 Alemanha,2014,115804,483316,Germany
 Argélia,2014,0,0,Algeria
 Arábia Saudita,2014,0,0,Saudi Arabia
@@ -2564,7 +2564,7 @@ Uruguai,2014,1237537,3782282,Uruguay
 Não consta na tabela,2014,0,0,
 Não declarados,2014,0,0,
 Outros,2014,0,0,
-Africa do Sul,2015,743335,2996543,
+Africa do Sul,2015,743335,2996543,South Africa
 Alemanha,2015,95171,358275,Germany
 Argélia,2015,0,0,Algeria
 Arábia Saudita,2015,0,0,Saudi Arabia
@@ -2621,7 +2621,7 @@ Uruguai,2015,1399547,4069100,Uruguay
 Não consta na tabela,2015,0,0,
 Não declarados,2015,0,0,
 Outros,2015,0,0,
-Africa do Sul,2016,578829,1686226,
+Africa do Sul,2016,578829,1686226,South Africa
 Alemanha,2016,158386,606333,Germany
 Argélia,2016,0,43,Algeria
 Arábia Saudita,2016,0,43,Saudi Arabia
@@ -2678,7 +2678,7 @@ Uruguai,2016,2215692,5099162,Uruguay
 Não consta na tabela,2016,0,0,
 Não declarados,2016,0,0,
 Outros,2016,0,0,
-Africa do Sul,2017,1138732,3241298,
+Africa do Sul,2017,1138732,3241298,South Africa
 Alemanha,2017,83289,315959,Germany
 Argélia,2017,0,0,Algeria
 Arábia Saudita,2017,0,0,Saudi Arabia
@@ -2735,7 +2735,7 @@ Uruguai,2017,5009098,7751966,Uruguay
 Não consta na tabela,2017,0,0,
 Não declarados,2017,0,0,
 Outros,2017,0,0,
-Africa do Sul,2018,1127053,3574371,
+Africa do Sul,2018,1127053,3574371,South Africa
 Alemanha,2018,142971,516975,Germany
 Argélia,2018,0,0,Algeria
 Arábia Saudita,2018,563,3249,Saudi Arabia
@@ -2792,7 +2792,7 @@ Uruguai,2018,2836574,8467846,Uruguay
 Não consta na tabela,2018,0,0,
 Não declarados,2018,0,0,
 Outros,2018,0,0,
-Africa do Sul,2019,1092042,3604038,
+Africa do Sul,2019,1092042,3604038,South Africa
 Alemanha,2019,101055,412794,Germany
 Argélia,2019,0,0,Algeria
 Arábia Saudita,2019,0,0,Saudi Arabia
@@ -2849,174 +2849,3 @@ Uruguai,2019,2778244,7938059,Uruguay
 Não consta na tabela,2019,0,0,
 Não declarados,2019,0,0,
 Outros,2019,0,0,
-Africa do Sul,2020,,,
-Alemanha,2020,,,Germany
-Argélia,2020,,,Algeria
-Arábia Saudita,2020,,,Saudi Arabia
-Argentina,2020,,,Argentina
-Austrália,2020,,,Australia
-Áustria,2020,,,Austria
-Bélgica,2020,,,Belgium
-Bolívia,2020,,,Bolivia
-Brasil,2020,,,Brazil
-Bulgária,2020,,,Bulgaria
-Canada,2020,,,
-Chile,2020,,,Chile
-China,2020,,,China
-"Coreia do Sul, República",2020,,,
-Croácia,2020,,,Croatia
-Emirados Árabes Unidos,2020,,,United Arab Emirates
-Eslovênia,2020,,,Slovenia
-Eslováquia,2020,,,Slovakia
-Espanha,2020,,,Spain
-Estados Unidos,2020,,,United States
-França,2020,,,France
-Geórgia,2020,,,Georgia
-Grécia,2020,,,Greece
-Hungria,2020,,,Hungary
-Indonesia,2020,,,
-Irlanda,2020,,,Ireland
-Israel,2020,,,Israel
-Itália,2020,,,Italy
-Japão,2020,,,Japan
-Iugoslavia,2020,,,
-Líbano,2020,,,Lebanon
-Luxemburgo,2020,,,Luxembourg
-Macedônia,2020,,,Macedonia
-Marrocos,2020,,,Morocco
-México,2020,,,Mexico
-Montenegro,2020,,,Montenegro
-Noruega,2020,,,Norway
-Nova Zelândia,2020,,,New Zealand
-Paises Baixos (Holanda),2020,,,
-Panamá,2020,,,Panama
-Peru,2020,,,Peru
-Porto Rico,2020,,,Puerto Rico
-Portugal,2020,,,Portugal
-Reino Unido,2020,,,United Kingdom
-Republica Dominicana,2020,,,
-Romênia,2020,,,Romania
-Rússia,2020,,,Russia
-Síria,2020,,,Syria
-Suíça,2020,,,Switzerland
-Tunísia,2020,,,Tunisia
-Turquia,2020,,,Turkey
-Ucrânia,2020,,,Ukraine
-Uruguai,2020,,,Uruguay
-Não consta na tabela,2020,,,
-Não declarados,2020,,,
-Outros,2020,,,
-Africa do Sul,2021,,,
-Alemanha,2021,,,Germany
-Argélia,2021,,,Algeria
-Arábia Saudita,2021,,,Saudi Arabia
-Argentina,2021,,,Argentina
-Austrália,2021,,,Australia
-Áustria,2021,,,Austria
-Bélgica,2021,,,Belgium
-Bolívia,2021,,,Bolivia
-Brasil,2021,,,Brazil
-Bulgária,2021,,,Bulgaria
-Canada,2021,,,
-Chile,2021,,,Chile
-China,2021,,,China
-"Coreia do Sul, República",2021,,,
-Croácia,2021,,,Croatia
-Emirados Árabes Unidos,2021,,,United Arab Emirates
-Eslovênia,2021,,,Slovenia
-Eslováquia,2021,,,Slovakia
-Espanha,2021,,,Spain
-Estados Unidos,2021,,,United States
-França,2021,,,France
-Geórgia,2021,,,Georgia
-Grécia,2021,,,Greece
-Hungria,2021,,,Hungary
-Indonesia,2021,,,
-Irlanda,2021,,,Ireland
-Israel,2021,,,Israel
-Itália,2021,,,Italy
-Japão,2021,,,Japan
-Iugoslavia,2021,,,
-Líbano,2021,,,Lebanon
-Luxemburgo,2021,,,Luxembourg
-Macedônia,2021,,,Macedonia
-Marrocos,2021,,,Morocco
-México,2021,,,Mexico
-Montenegro,2021,,,Montenegro
-Noruega,2021,,,Norway
-Nova Zelândia,2021,,,New Zealand
-Paises Baixos (Holanda),2021,,,
-Panamá,2021,,,Panama
-Peru,2021,,,Peru
-Porto Rico,2021,,,Puerto Rico
-Portugal,2021,,,Portugal
-Reino Unido,2021,,,United Kingdom
-Republica Dominicana,2021,,,
-Romênia,2021,,,Romania
-Rússia,2021,,,Russia
-Síria,2021,,,Syria
-Suíça,2021,,,Switzerland
-Tunísia,2021,,,Tunisia
-Turquia,2021,,,Turkey
-Ucrânia,2021,,,Ukraine
-Uruguai,2021,,,Uruguay
-Não consta na tabela,2021,,,
-Não declarados,2021,,,
-Outros,2021,,,
-Africa do Sul,2022,,,
-Alemanha,2022,,,Germany
-Argélia,2022,,,Algeria
-Arábia Saudita,2022,,,Saudi Arabia
-Argentina,2022,,,Argentina
-Austrália,2022,,,Australia
-Áustria,2022,,,Austria
-Bélgica,2022,,,Belgium
-Bolívia,2022,,,Bolivia
-Brasil,2022,,,Brazil
-Bulgária,2022,,,Bulgaria
-Canada,2022,,,
-Chile,2022,,,Chile
-China,2022,,,China
-"Coreia do Sul, República",2022,,,
-Croácia,2022,,,Croatia
-Emirados Árabes Unidos,2022,,,United Arab Emirates
-Eslovênia,2022,,,Slovenia
-Eslováquia,2022,,,Slovakia
-Espanha,2022,,,Spain
-Estados Unidos,2022,,,United States
-França,2022,,,France
-Geórgia,2022,,,Georgia
-Grécia,2022,,,Greece
-Hungria,2022,,,Hungary
-Indonesia,2022,,,
-Irlanda,2022,,,Ireland
-Israel,2022,,,Israel
-Itália,2022,,,Italy
-Japão,2022,,,Japan
-Iugoslavia,2022,,,
-Líbano,2022,,,Lebanon
-Luxemburgo,2022,,,Luxembourg
-Macedônia,2022,,,Macedonia
-Marrocos,2022,,,Morocco
-México,2022,,,Mexico
-Montenegro,2022,,,Montenegro
-Noruega,2022,,,Norway
-Nova Zelândia,2022,,,New Zealand
-Paises Baixos (Holanda),2022,,,
-Panamá,2022,,,Panama
-Peru,2022,,,Peru
-Porto Rico,2022,,,Puerto Rico
-Portugal,2022,,,Portugal
-Reino Unido,2022,,,United Kingdom
-Republica Dominicana,2022,,,
-Romênia,2022,,,Romania
-Rússia,2022,,,Russia
-Síria,2022,,,Syria
-Suíça,2022,,,Switzerland
-Tunísia,2022,,,Tunisia
-Turquia,2022,,,Turkey
-Ucrânia,2022,,,Ukraine
-Uruguai,2022,,,Uruguay
-Não consta na tabela,2022,,,
-Não declarados,2022,,,
-Outros,2022,,,
