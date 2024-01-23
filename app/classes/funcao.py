@@ -40,10 +40,11 @@ def graph_globe(df: pl.DataFrame) -> px:
         df.filter(pl.col("liters") > 1000)
         .group_by(["country","name"])
         .agg(pl.sum("value"))
+        .sort("value", descending=True)
     )
-
+    
     fig = px.scatter_geo(
-        df_aux,
+        df_aux.head(10),
         locations="name",
         locationmode="country names",
         size="value",
@@ -68,7 +69,7 @@ def graph_globe(df: pl.DataFrame) -> px:
             "font": {"size": 20},
         },
         template="seaborn",
-        height=500,
+        height=600,
         margin={"l": 10, "r": 10, "b": 140, "t": 130, "pad": 5},
         legend={
             "orientation": "v",
