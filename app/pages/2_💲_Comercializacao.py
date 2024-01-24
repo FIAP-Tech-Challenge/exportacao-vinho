@@ -2,11 +2,19 @@ import streamlit as st
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
+import urllib.request
+from PIL import Image
 import requests
 
 st.markdown("<p style='text-align: center; color:purple;font-size:54px'> Comercialização de Vinhos 💲</p>",  unsafe_allow_html=True)
 
 st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Agora começamos a falar sobre dinheiro 💸</b></p>",  unsafe_allow_html=True)
+
+url_com = "https://github.com/FIAP-Tech-Challenge/exportacao-vinho/blob/675dae91cd926352e9f23f991d3ad8c7dde74172/app/images/vinho-vida-rural.jpg?raw=true"
+
+with urllib.request.urlopen(url_com) as url_obj_com:
+    img_com = np.array(Image.open(url_obj_com))
+    st.image(img_com, width=400, caption='Fonte: Google', use_column_width=True)
 
 url_com = 'https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/comercializacao.csv'
 response_com = requests.get(url_com)     
@@ -60,3 +68,31 @@ st.link_button('Exportação de Vinhos', "https://exportacao-vinho.streamlit.app
 #plt.xlabel("Anos")
 
 #st.pyplot(plt)
+
+#df = df.query('(`Produto` == "VINHO DE MESA") | (`Produto` == "VINHO FINO DE MESA") | (`Produto` == "VINHO FRIZANTES") | (`Produto` == "VINHO ORGÂNICO") | (`Produto` == "VINHO ESPECIAL") | (`Produto` == "SUCO DE UVAS")')
+#df = df.reset_index(drop=True)
+
+#df = df.set_index('Produto')
+
+#df.index = ['VINHO DE MESA', 'VINHO ORGÂNICO', 'VINHO ESPECIAL','SUCO DE UVAS']
+
+#df = df.drop(columns=['Prefixo'])
+#df = df.drop(columns=['ID','1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+#       '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986',
+#       '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995',
+#       '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003'])
+
+#df = pd.DataFrame(df)
+#df.T.loc['2004':].plot(figsize=(12, 6))
+#plt.xticks(np.arange(0, len(df.columns), step=1), labels=df.columns)
+#plt.title("Valor anual da comercialização de vinhos")
+#plt.grid(linestyle = "--")
+#plt.xlabel("Anos")
+
+#st.pyplot(plt)
+
+#st.markdown(
+#    "<p style='text-align: justify; color:gray; font-size:18px'> Contudo, mesmo com os excelentes números das vendas de nossos vinhos, houve uma compensação no número de produtos importados, que podemos analisar na próxima apresentação.</p>",  unsafe_allow_html=True
+#)
+
+#st.link_button('Importação de Vinhos', "https://exportacao-vinho.streamlit.app/Importacao", use_container_width=True)

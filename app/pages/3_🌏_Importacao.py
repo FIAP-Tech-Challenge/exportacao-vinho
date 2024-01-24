@@ -6,7 +6,7 @@ from classes import funcao as f
 
 st.markdown("<p style='text-align: center; color:purple;font-size:54px'> Importação de Vinhedos 🌏</p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é crescer nossas vendas e expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True)
 
 st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>O Chile se destaca como um dos principais países na importação de vinhos para o Brasil, alcançando cerca de U$ 1.5 bilhões, seguidos de Argentina e Portugal. Abaixo podemos ver os países que mais importamos vinhedos.</p>",  unsafe_allow_html=True)
 
