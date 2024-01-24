@@ -10,10 +10,6 @@ st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso 
 
 st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>O Chile se destaca como um dos principais países na importação de vinhos para o Brasil, alcançando cerca de U$ 1.5 bilhões, seguidos de Argentina e Portugal. Abaixo podemos ver os países que mais importamos vinhedos.</p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>No ano de 2016 devido ao fenômeno climático do El Niño, que gerou demanda crescente no mercado, vemos que importamos um valor consideravelmente maior principalmente do Chile, aumentando U$ 15 milhões no valor importado em apenas 1 ano. Podemos conferir a relação de importação com os demais países do mundo nos últimos 15 anos no gráfico abaixo:</p>",  unsafe_allow_html=True)
-
-#st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2017 a 2019 houve um crescimento no valor total importado. </p>",  unsafe_allow_html=True)
-
 df = pl.read_csv("https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/importacao.csv",truncate_ragged_lines=True)
 
 f.tab_intro(df)

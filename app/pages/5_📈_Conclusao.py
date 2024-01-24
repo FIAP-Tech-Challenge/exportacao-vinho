@@ -18,3 +18,7 @@ st.markdown(
 "<p style='text-align: justify; color:gray; font-size:18px'>Em síntese, nossa estratégia delineia-se pela consolidação e expansão da liderança do vinho de mesa, pela exploração inteligente do potencial do suco de uva no mercado interno, pela busca estratégica de novos parceiros de importação e pela capitalização plena das oportunidades de crescimento nos mercados de exportação. A diversificação de atividades e a maximização do alcance de nossos produtos configuram-se como imperativos para assegurar a sustentabilidade e o sucesso contínuo em um cenário dinâmico e desafiador.</p>",  unsafe_allow_html=True
     )
 
+st.markdown(
+"<p style='text-align: justify; color:gray; font-size:18px'><b>Grupo 17</b> <br> José Faria - RM <br>Marcelo Sampaio – RM 352734<br>Micheli Souza – RM 352969<br>Rafael PayHop – RM 352735</p>",  unsafe_allow_html=True
+    )
+

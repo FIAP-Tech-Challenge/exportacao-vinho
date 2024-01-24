@@ -13,7 +13,9 @@ def tab_intro(df: pl.DataFrame) -> None:
     config_graph_1['agg'] = "Valor Total"
 
     st.plotly_chart(graph_1(df,config_graph_1), use_container_width=True)
+    st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>No ano de 2016 devido ao fenômeno climático do El Niño, que gerou demanda crescente no mercado, vemos que importamos um valor consideravelmente maior principalmente do Chile, aumentando U$ 15 milhões no valor importado em apenas 1 ano. Podemos conferir a relação de importação com os demais países do mundo nos últimos 15 anos no gráfico abaixo:</p>",  unsafe_allow_html=True)
     st.plotly_chart(graph(df, config_graph), use_container_width=True)
+    
     st.plotly_chart(graph_globe(df), use_container_width=True)
 
     st.markdown(
