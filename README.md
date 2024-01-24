@@ -1,5 +1,14 @@
 # FIAP - Vinho 🍷🍇
 
+Grupo 17
+José Faria- RM 
+Marcelo Sampaio – RM 352734
+Micheli Souza – RM 352969
+Rafael PayHop – RM 352735
+
+Link para acessar o app Streamlit: https://exportacao-vinho.streamlit.app/
+Link para acessar o código python: https://github.com/FIAP-Tech-Challenge/exportacao-vinho
+
 _Tech Challenge é o projeto da fase que englobará os conhecimentos obtidos em todas as disciplinas da fase. Esta é uma atividade que, em princípio, deve ser desenvolvida em grupo. Importante atentar-se ao prazo de entrega, pois trata-se de uma atividade obrigatória, uma vez que sua pontuação se refere a 60% da nota final._
 
 **O PROBLEMA:**
@@ -33,14 +42,14 @@ Seu objetivo é dizer o montante de venda de exportação nos últimos 15 anos, 
 
 **CONFIGURANDO O AMBIENTE:**
 
-1.O arquivo tratamento.py ficará responsável por extrair, transformar e ler os dados do csv de origem (./data)
+1.Clonar o repositório do GitHub “git clone https://github.com/FIAP-Tech-Challenge/exportacao-vinho”
 
 2.Todas as bibliotecas estarão listadas no arquivo requirements.txt para criação do ambiente virtual
 
-3.Abrir o prompt de comando para criar as variáveis de ambiente: "python -m venv venv"
+3.Abrir o prompt de comando no diretório /app para criar as variáveis de ambiente: "python -m venv venv"
 
 4.No Windows: "venv\Scripts\activate" e no Linux ou Mac: "source venv/bin/activate"
 
 5.Instalar os pacotes: "pip install -r requirements.txt"
 
-6.Com o diretório "app" selecionado, executar o comando: "streamlit run main.py"
+6. Executar o comando: "streamlit run main.py"
