@@ -27,17 +27,19 @@ def tab_intro(df: pl.DataFrame) -> None:
     return None
 
 def table_info(df: pl.DataFrame) -> pl.DataFrame:
-    return df.select(
+    return df.filter(pl.col("year") >= 2004).select(
         pl.lit("Brasil").alias("País de Origem"),
         pl.col("country").alias("País de Destino"),
         pl.col("year").alias("Ano de Referência"),
         pl.col("liters").alias("Quantidade de Vinho Importado (Litros)"),
         pl.col("value").alias("Valor Total Importado (US$)"),
     )
+      
 
 def graph_globe(df: pl.DataFrame) -> px:
     df_aux = (
         df.filter(pl.col("liters") > 1000)
+        .filter(pl.col("year") >= 2004)
         .group_by(["country","name"])
         .agg(pl.sum("value"))
         .sort("value", descending=True)
@@ -88,7 +90,7 @@ def graph_1(df: pl.DataFrame, config: dict) -> None:
     var = "value" if config['metric'] == "Valor Importado" else "liters"
     func = pl.sum if config['agg'] == "Valor Total" else pl.mean
 
-    df_aux = df.group_by("country").agg(func(var)).sort(var, descending=True)
+    df_aux = df.filter(pl.col("year") >= 2004).group_by("country").agg(func(var)).sort(var, descending=True)
     df_aux2 = df_aux.head(10)
     fig = px.bar(df_aux2, x="country", y=var)
 
@@ -155,9 +157,9 @@ def graph(df: pl.DataFrame, config:dict) -> None:
         list_selected = df_list_country.select(pl.col("country")).to_series().to_list()  
 
     with cols[0]:
-
         df_aux = (
-            df.select(pl.col(col_name, "country", "year"))
+            df.filter(pl.col("year") >= 2004)         
+            .select(pl.col(col_name, "country", "year"))
             .with_columns(
                 pl.when(pl.col("country").is_in(list_selected))
                 .then(pl.col("country"))

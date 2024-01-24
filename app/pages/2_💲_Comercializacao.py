@@ -17,10 +17,10 @@ with urllib.request.urlopen(url_com) as url_obj_com:
     st.image(img_com, width=400, caption='Fonte: Google', use_column_width=True)
 
 st.markdown(
-"<p style='text-align: justify; color:gray; font-size:18px'>Ao analisar os 49 anos de comercialização do vinho de mesa, torna-se evidente uma trajetória ascendente no mercado brasileiro, especialmente na região do Rio Grande do Sul. Destaca-se o ano de 2005, com um pico de vendas atingindo o valor de R$271 mil. No entanto, observamos uma queda nas vendas em 2008, totalizando apenas R$200 mil, atribuída, em parte, às condições climáticas adversas, influenciadas pelo fenômeno El Niño no Brasil.</p>",  unsafe_allow_html=True
+"<p style='text-align: justify; color:gray; font-size:18px'>Ao analisar os 49 anos de comercialização do vinho de mesa, torna-se evidente uma trajetória ascendente no mercado brasileiro, especialmente na região do Rio Grande do Sul. Destaca-se o ano de 2005, com um pico de vendas atingindo o valor de R$ 271 milhões. No entanto, observamos uma queda nas vendas em 2008, totalizando apenas R$ 200 milhões, atribuída, em parte, às condições climáticas adversas, influenciadas pelo fenômeno El Niño no Brasil.</p>",  unsafe_allow_html=True
 )
 st.markdown(
-"<p style='text-align: justify; color:gray; font-size:18px'>O Vinho de Mesa tem se mantido como líder de comercialização, evidenciando um crescimento gradual com uma trajetória ascendente. Notavelmente, o suco de uva está conquistando espaço no mercado da região do Rio Grande do Sul, registrando um faturamento em 2019 de R$147 mil. Essa cifra o coloca como um potencial produto que está próximo do nosso líder, o Vinho de Mesa, que alcançou um faturamento de R$180 mil no mesmo período.</p>",  unsafe_allow_html=True
+"<p style='text-align: justify; color:gray; font-size:18px'>O Vinho de Mesa tem se mantido como líder de comercialização, evidenciando um crescimento gradual com uma trajetória ascendente. Notavelmente, o suco de uva está conquistando espaço no mercado da região do Rio Grande do Sul, registrando um faturamento em 2019 de R$ 147 milhões. Essa cifra o coloca como um potencial produto que está próximo do nosso líder, o Vinho de Mesa, que alcançou um faturamento de R$ 180 milhões no mesmo período.</p>",  unsafe_allow_html=True
 )
 
 url_com = 'https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/comercializacao.csv'
@@ -61,7 +61,7 @@ plt.xlabel("Anos")
 st.pyplot(plt)
 
 st.markdown(
-    "<p style='text-align: justify; color:gray; font-size:18px'> Contudo, mesmo com os excelentes números de vendas de nosso produtos, houve uma compensação no número de produtos importados, que podemos analisar na próxima apresentação.</p>",  unsafe_allow_html=True
+    "<p style='text-align: justify; color:gray; font-size:18px'> Contudo, mesmo com os excelentes números das vendas de nossos vinhos, houve uma compensação no número de produtos importados, que podemos analisar na próxima apresentação.</p>",  unsafe_allow_html=True
 )
 
 st.link_button('Importação de Vinhos', "https://exportacao-vinho.streamlit.app/Importacao", use_container_width=True)
