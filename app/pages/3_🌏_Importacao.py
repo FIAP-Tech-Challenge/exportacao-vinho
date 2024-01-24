@@ -8,9 +8,15 @@ st.markdown("<p style='text-align: center; color:purple;font-size:54px'> Importa
 
 st.markdown("<p style='text-align: center; color:gray; font-size:24px'><b>Nosso objetivo é expandir a área de atuação, encontrando novos países que possam estabelecer vínculos comerciais. </b></p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2016 e 2019, o Chile se destacou como um dos principais países na importação de vinhos para o Brasil, alcançando um valor significativo de 1 milhão de dólares. Esse aumento foi impulsionado pelo fenômeno climático El Niño, que gerou uma demanda crescente no mercado. </p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>O Chile se destaca como um dos principais países na importação de vinhos para o Brasil, alcançando cerca de U$ 1.5 bilhões, seguidos de Argentina e Portugal. Abaixo podemos ver os países que mais importamos vinhedos.</p>",  unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Ao analisarmos as possibilidades de parcerias de mercado, a Argentina surge como um potencial parceiro expressivo, com um montante considerável de US$ 752 milhões de dólares e Portugal US$ 654 milhões de dólares. </p>",  unsafe_allow_html=True)
+st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>No ano de 2016 devido ao fenômeno climático do El Niño, que gerou demanda crescente no mercado, vemos que importamos um valor consideravelmente maior principalmente do Chile, aumentando U$ 15 milhões no valor importado em apenas 1 ano. Podemos conferir a relação de importação com os demais países do mundo nos últimos 15 anos no gráfico abaixo:</p>",  unsafe_allow_html=True)
+
+#st.markdown("<p style='text-align: justify; color:gray; font-size:18px'>Entre 2017 a 2019 houve um crescimento no valor total importado. </p>",  unsafe_allow_html=True)
+
+df = pl.read_csv("https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/importacao.csv",truncate_ragged_lines=True)
+
+f.tab_intro(df)
 
 st.markdown("""**Fonte de Dados:** [Banco de dados de uva, vinho e derivados](http://vitibrasil.cnpuv.embrapa.br/)""")
 
@@ -36,10 +42,4 @@ with st.expander("↓ Download dos Arquivos", expanded=False):
             type='primary',
             key="download_csv_imp"
         )
-
-st.markdown("<div style='margin-bottom: 40px'></div>", unsafe_allow_html=True)
-
-df = pl.read_csv("https://raw.githubusercontent.com/FIAP-Tech-Challenge/exportacao-vinho/main/app/data/importacao.csv",truncate_ragged_lines=True)
-
-f.tab_intro(df)
 
